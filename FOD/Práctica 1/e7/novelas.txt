@@ -1,0 +1,4 @@
+1 15.00 Genero
+Nombre
+2 7.00 Suspenso
+El Resplandor

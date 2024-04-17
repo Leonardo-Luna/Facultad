@@ -1,0 +1,117 @@
+program ejer10;
+
+const
+
+	valorAlto = 9999;
+
+type
+
+	regM = record
+		dpto: string;
+		division: integer;
+		num: integer;
+		categoria: integer;
+		horasExtra: integer;
+	end;
+	
+	archM = file of regM;
+	
+procedure leerM(var m: archM; var reg: regM);
+begin
+
+	if(not eof(m)) then
+		read(m, reg)
+	else
+		reg.dpto:= valorAlto;
+
+end;
+	
+function calcularValor(horas: integer; categoria: integer; var v: Text): real;
+var
+
+	auxMonto: real;
+	aux, i: integer;
+	
+begin
+
+	for i:= 1 to categoria do
+		readln(aux, auxMonto);
+	
+	calcularValor:= horas*auxMonto;
+
+end;
+	
+procedure procesar(var m: archM; var v: Text);
+var
+
+	reg, aux: regM;
+	totalHorasDiv, totalHorasDpto: integer;
+	aCobrar, totalDiv, totalDpto: real;
+
+begin
+
+	reset(m);
+	
+	leerM(m, reg);
+	totalDpto:= 0;
+	totalHorasDpto:= 0;
+	
+	while(reg.dpto <> valorAlto) do begin
+	
+		aux:= reg;
+		totalDpto:= 0;
+		totalHorasDpto:= 0;
+	
+		while(aux.dpto = reg.dpto) do begin
+		
+			totalHorasDiv:= 0;
+			totalDiv:= 0;
+		
+			while(aux.dpto = reg.dpto) and (aux.division = reg.division)) do begin
+			
+				aCobrar:= 0;
+						
+				while(aux.dpto = reg.dpto) and (aux.division = reg.division) and (aux.empleado = reg.empleado) do begin
+					
+					aCobrar:= aCobrar + calcularValor(reg.horasExtra, reg.categoria, v);
+					totalHorasDiv:= totalHorasDiv + reg.horasExtra;
+					totalDiv:= totalDiv + aCobrar;
+					leerM(m, reg);
+					
+				end;
+				
+				writeln(' 			Empleado nro: 			Horas: 			Importe a cobrar:');
+				writeln(' 			', reg.num, ' 			', reg.horasExtra, ' 			', aCobrar);
+				
+			end;
+			
+			writeln('Total de horas de la división: ', totalHorasDiv);
+			writeln('Monto total de la división: ', totalDiv);
+			
+			totalHorasDpto:= totalHorasDpto + totalHorasDiv;
+			totalDpto:= totalDpto + totalDiv;
+		
+		end;
+		
+		writeln('Total horas del departamento: ', totalHorasDpto);
+		writeln('Monto total del departamento: ', totalDpto);
+		
+	end;
+	
+	close(m);
+
+end;
+
+var
+
+	maestro: archM;
+	vectorMontos: Text;
+
+begin
+
+	assign(maestro, 'maestro.txt');
+	assign(vectorMontos, 'montoPorCategoria.txt');
+	
+	procesar(maestro, vectorMontos);
+
+end.

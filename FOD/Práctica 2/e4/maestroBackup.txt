@@ -1,0 +1,18 @@
+Buenos Aires
+1000
+500
+Chaco
+295
+100
+Cordoba
+200
+400
+Entre Rios
+700
+458
+Jujuy
+500
+100
+La Pampa
+52
+30

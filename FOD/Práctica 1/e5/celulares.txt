@@ -1,0 +1,18 @@
+1 150.00  Samsung
+20 15  Telefono
+Galaxy A23
+2 300.00  Samsung
+15 20  Telefono plegable
+Fold
+3 200.00  LG
+10 20  Telefono
+K61
+4 50.00  Nokia
+5 10  Telefono antiguo
+110
+5 75.00  Huawei
+1 1  Telefono usado
+Nova9
+6 10000.00  iPhone
+100 100  Telefono overpriced sin sentido
+15 Pro Max

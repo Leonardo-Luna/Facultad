@@ -1,0 +1,200 @@
+Program ejer5;
+
+type
+
+	celular = record
+		codigo: integer;
+		nombre: string;
+		descripcion: string;
+		marca: string;
+		precio: real;
+		stockMin: integer;
+		stockDisp: integer;
+	end;
+	
+	archivo = file of celular;
+	
+procedure leer(var c: celular);
+begin
+
+	writeln('Ingrese el codigo de celular: ');
+	readln(c.codigo);
+	if(c.codigo > 0) then begin
+	
+		writeln('Ingrese el nombre: ');
+		readln(c.nombre);
+		writeln('Ingrese la descripcion: ');
+		readln(c.descripcion);
+		writeln('Ingrese la marca: ');
+		readln(c.marca);
+		writeln('Ingrese el precio: ');
+		readln(c.precio);
+		writeln('Ingrese el stock minimo: ');
+		readln(c.stockMin);
+		writeln('Ingrese el stock disponible: ');
+		readln(c.stockDisp);
+	end;
+
+end;
+	
+procedure crearArchivo(var arch: archivo; var cel: Text);
+var
+
+	c: celular;
+
+begin
+
+	rewrite(arch);
+	reset(cel);
+
+	while(not eof(cel)) do begin
+	
+		readln(cel, c.codigo, c.precio, c.marca);
+		readln(cel, c.stockDisp, c.stockMin, c.descripcion);
+		readln(cel, c.nombre);
+		write(arch, c);
+		
+	end;
+	
+	close(arch);
+	close(cel);
+
+end;
+
+procedure listarMenor(var arch: archivo);
+var
+
+	c: celular;
+	
+begin
+
+	reset(arch);
+	
+	while(not eof(arch)) do begin
+	
+		read(arch, c);
+		if(c.stockDisp < c.stockMin) then begin
+		
+			writeln(c.marca, ' ', c.nombre, ' - $ ', c.precio:0:2);
+			writeln(c.descripcion);
+			writeln('');
+		
+		end;
+	
+	end;
+	
+	close(arch);
+
+end;
+
+procedure listarDescripcion(var arch: archivo);
+var
+
+	cadena: string;
+	c: celular;
+	
+begin
+
+	writeln('Ingrese la cadena a buscar: ');
+	readln(cadena);
+	cadena:= ' ' + cadena;
+	writeln('');
+	
+	reset(arch);
+	
+	while(not eof(arch)) do begin
+	
+		read(arch, c);
+		if(c.descripcion = cadena) then begin
+		
+			writeln(c.marca, ' ', c.nombre, ' - $ ', c.precio:0:2);
+			writeln(c.descripcion);
+			writeln('');
+			
+		end;
+		
+	end;
+	
+	close(arch);
+
+end;
+
+procedure exportar(var arch: archivo; var cel: Text);
+var
+
+	c: celular;
+	
+begin
+
+	reset(arch);
+	rewrite(cel);
+	
+	while(not eof(arch)) do begin
+	
+		read(arch, c);
+		writeln(cel, c.codigo, ' ', c.precio:0:2, ' ', c.marca);
+		writeln(cel, c.stockDisp, ' ', c.stockMin, ' ', c.descripcion);
+		writeln(cel, c.nombre);
+	
+	end;
+	
+	close(arch);
+	close(cel);
+
+end;
+
+procedure imprimirTodo(var arch: archivo);
+var
+
+	nombre: string;
+	c: celular;
+
+begin
+
+	nombre:= 'test.t';
+	
+	assign(arch, nombre);
+	reset(arch);
+	
+	while(not eof(arch)) do begin
+	
+		read(arch, c);
+		writeln(c.marca, ' ', c.nombre, ' - $ ', c.precio:0:2);
+		writeln(c.descripcion);
+		writeln('');
+		
+	end
+
+end;
+	
+var
+
+	arch: archivo;
+	cel: Text;
+	opcion: integer;
+	nombre: string;
+
+begin
+
+	writeln('1 - Crear un archivo');
+	writeln('2 - Listar en pantalla productos con stock menor al minimo');
+	writeln('3 - Listar en pantalla con filtro de descripcion');
+	writeln('4 - Exportar a .txt');
+	writeln('5..0 - Listar en pantalla todo');
+	readln(opcion);
+	
+	writeln(' ');
+	writeln('Ingrese el nombre del archivo (binario): ');
+	readln(nombre);
+	assign(arch, nombre);
+	assign(cel, 'celulares.txt');
+	
+	case (opcion) of
+		1: crearArchivo(arch, cel);
+		2: listarMenor(arch);
+		3: listarDescripcion(arch);
+		4: exportar(arch, cel);
+	else imprimirTodo(arch);
+	end
+	
+end.

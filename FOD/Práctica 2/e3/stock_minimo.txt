@@ -1,0 +1,18 @@
+2
+Jabon de manos
+7.50
+10
+20
+-------
+3
+Papel Higienico
+4.00
+2
+15
+-------
+5
+Limpia pisos
+12.75
+1
+10
+-------
