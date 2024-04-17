@@ -1,9 +1,11 @@
-package e2;
+package e5;
+
+import e2.BinaryTree;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		BinaryTree<Integer> arbolin = new BinaryTree<Integer>(5);
 		BinaryTree<Integer> izq = new BinaryTree<Integer>(2);
 		BinaryTree<Integer> der = new BinaryTree<Integer>(4);
@@ -15,16 +17,12 @@ public class Main {
 		arbolin.getRightChild().addRightChild(der2);
 		arbolin.getLeftChild().addLeftChild(izq2);
 		arbolin.getLeftChild().getLeftChild().addLeftChild(der2);
+		arbolin.getLeftChild().getLeftChild().addRightChild(der);;
 		
-		//System.out.println(arbolin.contarHojas());
-		//arbolin.preorden();
-		System.out.println("  ");
-		BinaryTree<Integer> arbolinEspejo = new BinaryTree<Integer>();
-		arbolinEspejo = arbolin.espejo();
-		//arbolinEspejo.preorden();
+		ProfundidadArbolBinario pab = new ProfundidadArbolBinario(arbolin);
 		
-		arbolin.entreNiveles(2, 3);
-
+		System.out.println(pab.SumaElementosProfundidad(2));
+		
 	}
 
 }
