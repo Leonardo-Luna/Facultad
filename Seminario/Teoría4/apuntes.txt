@@ -1,0 +1,42 @@
+//Solution explorer -> solucion en la que hay definido un proyecto
+//Carpeta "asda" es la raìz de la soluciòn - "asda" es el proyecto de la solucion
+
+//Variable de instancia -> Campo (En .net)
+//Constantes -> Cosa rara que vemos màs adelante (?)
+//En lugar de getter y setter (como en java :D) se usan propiedades
+//Finalizadores/Destructores -> Forma de ejecutar còdigo despuès de haber destruido el objeto
+
+using asda;
+
+/**Auto a;                                 Auto b;
+a = new Auto();                         b = new Auto();
+Console.Write(a.ToString());            Console.Write(" ! " + b.ToString());    Console.WriteLine("");
+
+a.Marca = "Nissan";                     b.Marca = "Ford";
+a.Modelo = 2017;                        b.Modelo = 1999;
+
+Console.WriteLine($"Auto {a.Marca} {a.Modelo}");
+Console.WriteLine($"Auto {b.Marca} {b.Modelo}"); **/
+
+//En lugar de los write de arriba 
+
+Auto a = new Auto("Buggy", 2002); //En lugar de asignar los campos 1x1, paso los parámetros en el constructor :D - https://static.wikia.nocookie.net/topstrongest/images/c/c1/Car.jpg/revision/latest/scale-to-width-down/459?cb=20180308070058
+Auto b = new Auto("Ford", 2015);
+Auto c = new Auto();
+Auto d = new Auto("Dam mirate One Piece vos sabés que querés no te hagas el piola, antes de que termine el");
+
+Console.WriteLine(a.ObtenerDescripcion());
+Console.WriteLine(b.ObtenerDescripcion());
+Console.WriteLine(c.ObtenerDescripcion());
+Console.WriteLine(d.ObtenerDescripcion());
+
+//La mejor forma de interactuar con objetos es mediante mètodos. No con las variables de forma directa
+//Se pueden crear mètodos privados para que no se puedan usar desde afuera
+
+//Encapsulamiento -> Trabajar con objetos pero su representacion interna (campos) es inaccesible fuera de la clase
+//Sobrecarga de operadores -> Las diferentes formas en las que funciona un operador (+ - *, etc) dependiendo los tipos que se usen
+//Sobrecarga de métodos -> Tener diferentes métodos bajo el mismo nombre, pero tiene que ser algo notorio, por ejemplo que reciba distintos tipos de valores. La diferencia no puede estar en el ref o out, tampoco es si es void o devuelve algún tipo
+
+//Constructores principales/primarios -> se le pueden poner parametros a la clase en lugar de crear un constructor, por ejemplo en el caso de autos => public class Autos(string marca, int modelo) {}
+
+Console.ReadKey();

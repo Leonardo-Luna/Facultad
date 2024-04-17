@@ -1,0 +1,132 @@
+object obj = 7.3;
+Console.WriteLine(obj.GetType()); //Da System.Double porque System es el namespace
+                                  //donde se define el tipo del obj
+
+obj = "Casa";
+Console.WriteLine(obj.GetType()); //Idem
+
+obj = 4 + 2.14; //El obj en este caso es un double
+Console.WriteLine((double)obj + 1); //Idem idem -> Sin el GetType() te imprime el valor #dou
+                        //En obj no se pueden realizar operaciones matemáticas 
+                        //A menos que le hagas Casting #Programación #Programadores #Hacker
+
+obj = 1 + 'A';
+Console.WriteLine(obj); //Convierte el char ASCII de 'A' a su número (65) y da 66
+
+obj = "CAS" + 'A';
+Console.WriteLine(obj); //En este caso concatena el string + char #MindBlowing
+
+obj = "Área " + 51;
+Console.WriteLine(obj); //Concatena
+
+obj = "Área " + 5 + 1;
+Console.WriteLine(obj); //Área 51
+
+obj = 5 + 1 + " Área";
+Console.WriteLine(obj); //SixSix como el de Ben 10, 6 Área
+
+int? i1 = null; //Con el ? puedo declarar un int que acepta valores null
+string? st1 = null; //Si no tiene el ? no puede recibir el valor null -> NullableValueType
+
+/**
+
+i1.hasValue     /Si null = false
+i1.Value        //Si null = 0
+
+**/
+int i = 5;
+int? j = i; //No es necesario hacer el casteo porque j puede aceptar valores y null
+i = (int)j; //Se puede hacer pero puede crashear porque le asignamos null a un no nullablevaluetype
+i = j ?? -1; //Si J != null, asigna J, de lo contrario asigna -1
+
+string st2 = st1; //Da warning pero nunca error porque string al ser puntero puede
+                  //tener null, por eso la rayita amarilla abajo #Pis
+
+//Lo correcto sería:
+st2 = st1 != null ? st1 : "default"; //Si vale null, asigno "default," sino st1 😎😎😎😎
+
+Console.WriteLine(st2 is string); //No usar porque polimorfismo o algo así, no entendí
+
+st1 = (string)obj;
+obj = 12;
+st1 = obj as string; //Pone st1 en null porque no puede convertir un int en string
+Console.WriteLine(st1 + "      <- null");
+//st1 = (string)obj; //💥💥💥💥 no se puede convertir entero en string (Explota)
+
+char c1 = 'A';
+char c2 = 'A';
+Console.WriteLine(c1 == c2);
+
+object o1 = 'A';
+object o2 = 'A'; // o2 = o1 da true -> Épico pero no tan épico como Xiao 👍 (Su altura 📈📈📈📈)
+Console.WriteLine(o1 == o2); //Estúpidas direcciones de memoria 🦅🦅🦅
+
+int[] vector1 = new int[5] {1, 2, 3, 4, 5}; //Si especificas una longitud y le asignas valores
+                                            //en el momento tenes que llenarlo #mid
+int[] vector2 = new int[200]; //Si no lo llenas, podes hacerlo despues y darle x espacios
+
+foreach(int mifavorito in vector1) //El foreach es el mejor tipo de loop, change my mind
+{
+    Console.Write($"{mifavorito} ");
+}
+
+DiaDeSemana dia;
+dia = DiaDeSemana.lunes;
+
+int Sumar(int a, int b)
+{
+        int resultado = a + b;
+        return resultado;
+}
+
+void Imprimir(ref string st)
+{
+    Console.WriteLine(st);
+    st = "Malos días";
+    return;
+}
+
+Console.WriteLine($"\n{Sumar(5,1)}"); 
+
+string stringsito = "Hola Mundo!";
+Imprimir(ref stringsito); //Los parámetros se pasan por referencia
+Console.WriteLine(stringsito); //Si le pongo ref al parámetro me cambia el valor en el prog. ppal.
+//Si paso algo por ref tengo que ponerle "ref" a la variable y el parámetro
+
+void Sumar2(int a, int b, out int resultado)
+{
+    resultado = a + b;
+}
+
+int r; //El valor de R no importa porque se lo va a asignar el pasaje de parámetros
+Sumar2(1,2,out r);
+Console.WriteLine($"{r}"); //Acá R ya tiene su resultado, que se lo dio el método sumar
+
+void Imprimir2(string st) => Console.WriteLine(st); //re piola la flechita
+//void Sumar3(int a, int b) => a+b; //PQ NO FUNCIONAAA AAAAAAAA
+
+Console.ReadKey();
+
+enum DiaDeSemana //La definición de la enum va abajo del todo
+{ //O preferiblemente en un archivo separado
+    lunes, martes, miercoles
+}
+
+//Excepción -> error en tiempo de ejecución #DATAZO
+// Tipo valor -> Tipos primitivos y enumerativos 
+//Boxing y Unboxing -> Conversiones entre datos primitivos y wrapped
+    //Lo paso de primitivo a puntero para usarlo como objeto
+    //Casting -> Conversión "forzada" (Puede no funciona) explícita -- (int)var;
+//null = ausencia de valor
+//as = similar a cast, realiza conversión explícita hacia tipo que admite null
+    //Si no se puede castear, devuelve null, mientras que cast lanza una excepcion
+//Los vectores trabajan con punteros, si copio un vector, están enlazados por la dir. de mem.
+//El == en los string compara el contenido (desde x version), discrimina mayus de minus
+//Con el StringBuilder se puede trabajar con strings de forma similar a un vector
+//Enumeraciones -> Puedo definir como "constantes" predefinidas
+    //A la hora de escribir código podés usar los valores predefinidos para no asignar
+    //algo por error que pueda romper el código (no muy util, pero al profe le encantan)
+
+//Chequear el in y ref readonly para ver que onda pero dijeron que no se usa
+
+//#Productividad #NoComoEula #EulaMalaMalisima #3DeDaño #DoriHaceMas

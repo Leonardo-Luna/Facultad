@@ -1,0 +1,114 @@
+namespace p4 {
+
+    class Program {
+
+        public static void Main(string[] args) {
+
+            /**List<Persona> lista = new List<Persona>();
+
+            Console.WriteLine("Ingrese los datos separados por una coma, \"nombre,edad,DNI\"");
+
+            for(int i = 0; i < 5; i++) {
+
+                string datos = Console.ReadLine();
+                string[] v = new string[3];
+                v = datos.Split(',');
+
+                string nombre = v[0];
+                int edad = int.Parse(v[1]);
+                int DNI = int.Parse(v[2]);
+
+                Persona test = new Persona(nombre, edad, DNI);
+                lista.Add(test);
+            }
+
+            int cont = 1;
+            foreach(Persona i in lista) {
+
+                Console.WriteLine($"{cont})        {i.texto()}");
+                cont++;
+
+            }
+
+            Persona aux = lista[0];
+
+            foreach(Persona i in lista) {
+
+                if(aux.esMayorQue(i)) {
+                    aux = i;
+                }
+
+            }
+
+            Console.WriteLine(aux.texto()); **/
+
+            Hora h = new Hora(23, 30, 15);
+            h.imprimir();
+            Hora h2 = new Hora(14.45114);
+
+        }
+
+    }
+
+}
+
+    class Persona {
+
+        private string nombre {get;}
+        private int edad {get;}
+        private int DNI {get;}
+
+        public Persona(string nombre, int edad, int DNI) {
+
+            this.nombre = nombre;
+            this.edad = edad;
+            this.DNI = DNI;
+
+        }
+
+        public string texto() {
+
+            return $"{this.nombre}      {this.edad}       {this.DNI}";
+
+        }
+
+        public bool esMayorQue(Persona p) {
+
+            return this.edad > p.edad;
+
+        }
+
+    }
+
+    class Hora {
+
+        private int hora {get;}
+        private int minutos {get;}
+        private int segundos {get;}
+
+        public Hora(int h, int m, int s) {
+
+            this.hora = h;
+            this.minutos = m;
+            this.segundos = s;
+
+        }
+
+        public Hora(double h) {
+
+            string aux = h.ToString();
+            string[] v = aux.Split(',');
+            this.hora = int.Parse(v[0]);
+
+            double auxMinutos = int.Parse(v[1]) * 60;
+            Console.WriteLine(this.hora + " " + auxMinutos);
+
+        }
+
+        public void imprimir() {
+
+            Console.WriteLine($"{this.hora} horas, {this.minutos} minutos, {this.segundos} segundos");
+
+        }
+
+    }

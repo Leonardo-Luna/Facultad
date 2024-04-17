@@ -1,0 +1,30 @@
+namespace asda;
+public class Auto //Si uso el constructor primario no tengo que definir las variables (campos) abajo
+{
+
+    // <tipo> <variable> No es una variable de metodo, sino que afecta a la clase entera
+    private string _marca; //Al estar "obligando" al usuario a pasar parametros en la creacion, puedo sacarle el ? al String
+    private int _modelo;
+
+    public Auto(string marca, int modelo) //Constructor
+    {
+        this._marca = marca;
+        this._modelo = modelo;
+    }
+
+    public Auto()
+    {
+        this._marca = "Fiat";
+        this._modelo = DateTime.Now.Year;
+    }
+
+    public Auto(string marca) : this() // : this() llama al constructor vacio, si le paso argumentos, llama al que haya especificado ej : this(marca, modelo) llama al primero escrito (en este caso)
+    {
+        this._marca = marca; //Devuelve un obj auto con marca "Fiat" que se sobreescribe
+        //Y  modelo 2024 que no lo sobreescribo pq no es necesario para este caso
+    }
+
+    public string ObtenerDescripcion() => //Odio con mi ser el operador Lambda
+        $"Auto {_marca} {_modelo}";
+
+}

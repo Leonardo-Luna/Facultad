@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\bin\Debug\net8.0\Autos.deps.json
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\bin\Debug\net8.0\Autos.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\bin\Debug\net8.0\Autos.pdb
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\obj\Debug\net8.0\Autos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\obj\Debug\net8.0\Autos.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\obj\Debug\net8.0\Autos.AssemblyInfo.cs
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\obj\Debug\net8.0\Autos.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\obj\Debug\net8.0\Autos.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\obj\Debug\net8.0\refint\Autos.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\obj\Debug\net8.0\Autos.pdb
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Autos\obj\Debug\net8.0\ref\Autos.dll

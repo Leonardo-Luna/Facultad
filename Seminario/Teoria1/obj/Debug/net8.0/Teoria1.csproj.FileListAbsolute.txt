@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\bin\Debug\net8.0\Teoria1.exe
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\bin\Debug\net8.0\Teoria1.deps.json
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\bin\Debug\net8.0\Teoria1.runtimeconfig.json
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\bin\Debug\net8.0\Teoria1.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\bin\Debug\net8.0\Teoria1.pdb
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\Teoria1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\Teoria1.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\Teoria1.AssemblyInfo.cs
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\Teoria1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\Teoria1.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\refint\Teoria1.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\Teoria1.pdb
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\Teoria1.genruntimeconfig.cache
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Teoria1\obj\Debug\net8.0\ref\Teoria1.dll

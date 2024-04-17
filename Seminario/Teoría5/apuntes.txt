@@ -1,0 +1,137 @@
+namespace Teoria5
+{
+    class Program
+    {
+
+        public static void Main(string[] args)
+        {
+
+            Cuenta.ImprimirResumen();
+
+            Cuenta c1 = new Cuenta();
+            //c1.ImprimirResumen(); //No se puede usar un método static con una variable de instancia
+
+            Cuenta c3 = new Cuenta();
+            Cuenta c2 = new Cuenta();
+            c3.Monto = 20;
+            Cuenta.Total += c3.Monto;
+            c2.Monto = 30;
+            Cuenta.Total += c2.Monto;
+            Cuenta.ImprimirResumen();
+
+            //Las variables privadas por convención se escriben con _ al inicio
+            //Las variables estáticas privadas por convención se escriben con s_ al inicio
+
+            //Los constructores estáticos se ejecutan una ÚNICA vez cuando se ejecuta el programa
+            //No se puede ejecutar manualamente ni hacer una sobrecarga de constructores. Tampoco importa si es public ni private
+            //Sería: static Nombre() {Cuerpo}
+
+            //Las clases estáticas no pueden tener métodos no estáticos
+
+            //using -> Importar el "paquete" (no sé el nombre en c#) con todos sus archivos y clases
+
+            //Se pueden definir constantes usando "const" antes del tipo de la variable, evidentemente no se pueden modificar sus valores
+            //Las constantes no permiten valores que sean operaciones, tiene que ser un literal
+
+            //readonly -> Similar a una constante pero con menos restricciones, se puede modificar su valor en instancia o un constructor
+            //Es decir, cada objeto puede tener un valor de readonly diferente que no sea modificable
+            //A menos que el valor que almacena sea un puntero y modifiques lo que apunta, pero ya no tiene sentido el readonly
+
+            Cuadrado c = new Cuadrado();
+            c.SetLado(2.5);
+            Console.WriteLine(c.GetLado() + " " + c.GetArea()); //Utilizando getters y setters como Java
+
+            Cuadrado2 cubito = new Cuadrado2();
+            cubito.Lado = 2.5; //Si se usa encapsulamiento no es necesario pasarlo como argumento entre (), sino igualarlo
+            Console.WriteLine($"{cubito.Lado} {cubito.Area}"); //Utilizando encapsulamiento
+
+            Familia f = new Familia();
+            f.Padre = new Persona("Juan", 50);
+            f[1] = new Persona("María", 40);
+            f[2] = new Persona("José", 15);
+            f.Padre.Imprimir();
+
+            for (int i = 0; i < 3; i++)
+            {
+
+                f[i]?.Imprimir(); //Imprimir con el indizador
+
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}
+
+class Cuenta
+{
+
+    public int Monto;
+    public static int Total; //Se pueden usar variables estáticas en un constructor
+
+    public static void ImprimirResumen() =>
+    Console.WriteLine($"Total = {Total}"); //Al ser una variable static puedo usarla en un método static, sino no dejaría ->
+                                           //Va a imprimir el total de TODAS las cuentas
+
+    //public static void VaADarError() =>
+    //Console.WriteLine($"Monto = {Monto}"); //No se puede acceder a una variable no estática en un método estático
+
+}
+
+class Cuadrado
+{
+    private double _lado;
+    public void SetLado(double value) => _lado = value;
+    public double GetLado() => _lado;
+    public double GetArea() => _lado * _lado;
+}
+
+class Cuadrado2 //Encapsulamiento
+{
+    private double _lado;
+    public double Lado
+    {
+        get { return _lado; }
+        set { _lado = value; }
+    }
+    public double Area { get { return _lado * _lado; } }
+}
+
+class Persona
+{
+    public int Edad { get; }
+    public string Nombre { get; }
+    public Persona(string nombre, int edad)
+    {
+        Nombre = nombre;
+        Edad = edad;
+    }
+    public void Imprimir() =>
+    Console.WriteLine($"{Nombre} ({Edad})");
+
+}
+
+class Familia
+{
+    public Persona? Padre { get; set; }
+    public Persona? Madre { get; set; }
+    public Persona? Hijo { get; set; }
+
+    public Persona? this[int i] //Indizador
+    {
+        get
+        {
+            if (i == 0) return Padre;
+            else if (i == 1) return Madre;
+            else if (i == 2) return Hijo;
+            else return null;
+        }
+        set
+        {
+            if (i == 0) Padre = value;
+            else if (i == 1) Madre = value;
+            else if (i == 2) Hijo = value;
+        }
+    }
+}

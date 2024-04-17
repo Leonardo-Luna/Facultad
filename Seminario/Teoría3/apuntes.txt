@@ -1,0 +1,130 @@
+//q onda dam haceme acordar que me guarde el archivo en mi compu
+//que siempre me olvido
+
+int [,] matriz;
+int[][] vector;
+int[][] vector2 = [[1,2],
+                    [3,4,5]];
+
+var x = new { Nombre = "Leo", Edad = 19};
+Console.WriteLine(x.Nombre + " " + x.Edad); //Tipos anónimos
+
+dynamic d = 'a';
+d = 4;
+d = "Hola mundo"; //El tipo dinámico permite modificar el contenido de forma flexible
+
+string marca = "Ford";
+int modelo = 2000;
+string st = string.Format("Es un {0} año {1}", marca, modelo); //Puedo hacer todo el string con placeholders
+//{0}, {1}, {2}... en los cuales se asignan las variables pasadas al final
+Console.WriteLine(st);
+
+Console.WriteLine($"Es un {marca, 7} año {modelo}"); //Asignarle un ,numero despues de la var
+Console.WriteLine($"Es un {"Nissan", -7} año {2020}"); //Fuerza la cantidad de lugares que debe ocupar al ser impresa
+
+double r = 2.575;
+Console.WriteLine($"Valor = {r:0.0}"); //Máscara de formato, limita el fuerza el formato del numero
+//No trunca los números, los redondea
+Console.WriteLine(r.ToString("0.00"));
+
+List<int> lista = [ 10, 20, 30, 40 ];
+int[] vector3 = new int[] { 31, 32, 33 };
+lista.InsertRange(3, vector3);
+for (int i = 0; i < lista.Count; i++)
+{
+   Console.WriteLine(lista[i]);
+}
+
+Queue<char> cola = new Queue<char>();
+cola.Enqueue('A');
+cola.Enqueue('B');
+cola.Enqueue('C');
+while(cola.Count > 0)
+{
+    Console.WriteLine(cola.Dequeue());
+}
+
+Console.WriteLine(" ");
+double[]? vector4 = new double[10];
+Procesar(vector4, 1, 1);
+Procesar(null, 1, 1);
+Procesar(vector4, 10, 1);
+Procesar(vector4, -1, 1);
+Procesar(vector4, 1, -10);
+Procesar(vector4, 1, 1);
+
+void Procesar(double[]? v, int i, int c)
+{
+    try
+    {
+        c = c+10;
+        v[i] = 1000/c;
+        Console.WriteLine(v[i]);
+    }
+    catch(Exception e)
+    {
+        Console.WriteLine($"No procesado, {e.Message}");
+    }
+}
+
+//var != null y se le debe asignar un valor al crear la variable
+//Interpolación de Strings es cuando $"{var} texto"
+//Excepciones -> Errores en tiempo de ejecución
+//Checked chequea si se causa overflow en tiempo de ejecucion
+//Try - Catch (Cuantos quiera) - Finally
+//Finally se ejecuta haya o no haya excepciones
+double?[] v = new double?[10];
+int c = 1;
+int j = 1;
+try
+{
+    c = c+10;
+    v[j] = 1000/c;
+    Console.WriteLine(v[j]);
+}
+catch(InvalidCastException)
+{
+    //Capturo la excepción específica
+}
+catch(Exception e)
+{
+    //Captura la primera excepción que pasa
+    //Si le agrego una variable puedo usar la excepción
+}
+
+Test(1);
+Test(0);
+
+void Test(int x)
+{
+    try
+    {
+        x = 1 / x;
+        return;
+    }
+    catch
+    {
+        Console.WriteLine("Excepción");
+    }
+    finally
+    {
+        Console.WriteLine("Finally");
+        //El bloque de Finally se ejecuta siempre
+        //Finally -> Excepción -> Continuación de código
+    }
+    Console.WriteLine("Continúa");
+    //Si hace el return bien, entonces nunca se ejecuta el "Continúa"
+}
+
+//Las excepciones se propagan por la pila de ejecución
+//Si un método llama a otro, y en el 2do se produce una excepción,
+//El 2do método se abortará propagando la excepción al 1er método y ese podría tratarla
+//metodo1 => try metodo2 => catch
+//Si el método 2 tiene un try/catch/finally, el finally se va a ejecutar sin importar qué
+//Operador Throw -> if (algo) => lanzar excepciones existentes/propias
+//Throw e -> Lanza una excepción
+//Throw -> Manda al método invocador la exepción para que la trate
+//Ejemplo -> Throw new ArgumentNullException("Texto")
+//Throw new Exception("Mensaje personalizado")
+
+Console.ReadKey();

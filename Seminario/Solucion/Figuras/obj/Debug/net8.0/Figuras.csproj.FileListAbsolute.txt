@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\bin\Debug\net8.0\Figuras.deps.json
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\bin\Debug\net8.0\Figuras.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\bin\Debug\net8.0\Figuras.pdb
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\obj\Debug\net8.0\Figuras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\obj\Debug\net8.0\Figuras.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\obj\Debug\net8.0\Figuras.AssemblyInfo.cs
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\obj\Debug\net8.0\Figuras.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\obj\Debug\net8.0\Figuras.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\obj\Debug\net8.0\refint\Figuras.dll
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\obj\Debug\net8.0\Figuras.pdb
+C:\Users\User\Desktop\Leo\Facultad\Seminario de Lenguajes\Solucion\Figuras\obj\Debug\net8.0\ref\Figuras.dll
