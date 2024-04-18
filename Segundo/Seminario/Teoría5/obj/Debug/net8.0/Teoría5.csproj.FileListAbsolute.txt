@@ -1,0 +1,29 @@
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\bin\Debug\net8.0\Teoría5.exe
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\bin\Debug\net8.0\Teoría5.deps.json
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\bin\Debug\net8.0\Teoría5.runtimeconfig.json
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\bin\Debug\net8.0\Teoría5.dll
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\bin\Debug\net8.0\Teoría5.pdb
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\Teoría5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\Teoría5.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\Teoría5.AssemblyInfo.cs
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\Teoría5.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\Teoría5.sourcelink.json
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\Teoría5.dll
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\refint\Teoría5.dll
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\Teoría5.pdb
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\Teoría5.genruntimeconfig.cache
+C:\Users\User\Desktop\Leo\Facultad\FacultadGit\Facultad\Segundo\Seminario\Teoría5\obj\Debug\net8.0\ref\Teoría5.dll
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\bin\Debug\net8.0\Teoría5.exe
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\bin\Debug\net8.0\Teoría5.deps.json
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\bin\Debug\net8.0\Teoría5.runtimeconfig.json
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\bin\Debug\net8.0\Teoría5.dll
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\bin\Debug\net8.0\Teoría5.pdb
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\Teoría5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\Teoría5.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\Teoría5.AssemblyInfo.cs
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\Teoría5.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\Teoría5.dll
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\refint\Teoría5.dll
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\Teoría5.pdb
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\Teoría5.genruntimeconfig.cache
+C:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Teoría5\obj\Debug\net8.0\ref\Teoría5.dll
