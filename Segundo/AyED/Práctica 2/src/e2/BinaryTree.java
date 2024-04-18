@@ -88,6 +88,19 @@ public class BinaryTree <T> {
 		
 	}
 	
+	public void postorden() {
+		
+		if(this.hasLeftChild()) {
+			this.getLeftChild().postorden();
+		}
+		if(this.hasRightChild()) {
+			this.getRightChild().postorden();
+		}
+		
+		System.out.println(this.getData());
+		
+	}
+	
 	public int contarHojas() {
 		
 		if(this.isLeaf()) {
