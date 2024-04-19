@@ -62,9 +62,19 @@ namespace p5
         public static void ejer7()
         {
 
-            Persona t = new Persona();
+            Persona p = new Persona();
 
-            Console.WriteLine(t[1]);
+            p[1] = "Leo";
+            p[2] = 'M';
+            p[3] = 111111;
+            p[4] = new DateTime(2004, 1, 1);
+
+            Console.WriteLine((string)p[1]);
+            Console.WriteLine((char)p[2]);
+            Console.WriteLine((int)p[3]);
+            Console.WriteLine((DateTime)p[4]);
+            Console.WriteLine((int)p[5]);
+            Console.WriteLine(p[9]);
 
         }
 
