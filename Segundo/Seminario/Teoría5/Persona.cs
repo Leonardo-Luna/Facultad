@@ -32,11 +32,13 @@ namespace p5
                     case 3: this.DNI = (int)value;
                             break;
 
-                    case 4: break;
+                    default: break;
 
                 }
 
             }
+
+            get{ return $"{this.Nombre} - {this.DNI} - {this.Sexo} - {this.Edad}"; }
 
         }
 

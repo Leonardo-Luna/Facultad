@@ -64,6 +64,8 @@ namespace p5
 
             Persona t = new Persona();
 
+            Console.WriteLine(t[1]);
+
         }
 
     }
