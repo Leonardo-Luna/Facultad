@@ -212,12 +212,14 @@ begin
 		reg.fallecido:= false;
 	
 		if(minN.partida = minF.partida) then begin
+		
 			reg.fallecido:= true;
 			reg.matriculaDeceso:= minF.matriculaD;
 			reg.fechaD:= minF.fecha;
 			reg.horaD:= minF.hora;
 			reg.lugar:= minF.lugar;
 			minimoF(fallecimientos, vRegF, minF);
+			
 		end;
 		
 		minimoN(nacimientos, vRegN, minN);

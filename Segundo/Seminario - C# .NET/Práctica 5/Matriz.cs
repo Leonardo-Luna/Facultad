@@ -28,7 +28,7 @@ namespace p5
                         diag[i] = this._matriz[i,i];
 
                     }
-
+                
                     return diag;
                 }
                 else

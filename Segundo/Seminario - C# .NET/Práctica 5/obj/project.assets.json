@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Teoría5\\Teoría5.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 5\\Teoría5.csproj",
       "projectName": "Teoría5",
-      "projectPath": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Teoría5\\Teoría5.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 5\\Teoría5.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Teoría5\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"

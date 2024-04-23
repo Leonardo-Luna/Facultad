@@ -1,0 +1,89 @@
+
+//  INTERFACES
+
+if (o is Empleado)
+    {
+        Empleado aux = (Empleado)o;
+        aux.Imprimir();
+    }
+    else
+    {
+        Moto aux = (Moto)o;
+        aux.Imprimir();
+    }
+
+//  Equivale a:
+
+if(o is Empleado e) 
+{
+    e.Imprimir();
+}
+else if(o is Moto m)
+{
+    m.Imprimir();
+}
+
+
+/**
+
+Tipo de referencia que especifica un conjunto de funciones sin implementarlas.
+No pueden ser campos, son parte del comportamiento de los objetos. Deben ser métodos/propiedades.
+Una interfaz no puede contener campos de instancia, constructores de instancia ni finalizadores.
+Similares a clases abstractas. Las clases que heredan las interfaces deben implementar sus métodos.
+Pueden tener variables de instancia con get y set, las cuales tienen que ser implementadas.
+Las interfaces no pueden ser instanciadas, pero si pueden usarse como tipo de variable (se pueden crear vectores).
+
+**/
+
+public interface ejemplo
+{
+
+    public void UnMetodo();
+
+}
+
+//  Aplicación:
+
+class Rombo : Figura, ejemplo       // Heredo de una clase, ' , ' implemento las interfaces
+{
+    ...
+}
+
+//  Forma mejorada usando interfaces:
+
+IImprimible[] vector = [
+        new Moto("Zanella"),
+        new Empleado("Juan"),
+        new Moto("Gilera")
+];
+
+foreach (IImprimible imp in vector)
+{
+
+    imp.Imprimir();
+
+}
+
+//  Archivos de texto
+
+/**
+
+FileInfo y DirectoryInfo son clases que deben instanciarse para usarlas.
+Environment es una clase estática que da información sobre el entorno.
+El método close además de cerrar el archivo genera algo imilar a un dispose, libera los recursos usados en las operaciones.
+
+**/
+
+//  Proyecto de inversión de dependencias (DIP) y Patrón de inyección de dependencias
+
+/**
+ 
+Inversión de dependencias: Cuando una clase importante sólo depende de clases abstractas e interfaces, no de cosas simples o clases/archivos "basura"
+
+Inyección de dependencias: Pasar por parámetro al constructor un dato/variable/instancia necesaria para que esa clase no dependa
+de código basura, sino solo lo recibe
+
+**/
+
+//  Arquitectura Limpia
+
