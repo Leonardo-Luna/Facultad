@@ -298,14 +298,14 @@ begin
 	writeln('Ingrese el numero de empleado a borrar: ');
 	readln(num);
 
-	read(arch, e);
 	encontre:= false;
 	
 	writeln('test');
 	seek(arch, filesize(arch)-1);
-	writeln('test');
 	read(arch, aux);
+	writeln('test');
 	seek(arch, 0);
+	read(arch, e);
 
 	while(not eof(arch)) and (e.num <> num) do begin
 	
@@ -317,7 +317,7 @@ begin
 		encontre:= true;
 		seek(arch, filepos(arch)-1);
 		write(arch, aux);
-		seek(arch, filepos(arch)-1);
+		seek(arch, filesize(arch)-1);
 		truncate(arch);
 	end;
 	
@@ -384,7 +384,7 @@ begin
 	
 	writeln('Ingrese el nombre del archivo: ');
 	readln(nomArch);
-	assign(arch, 'Ejercicio1.txt');
+	assign(arch, nomArch);
 	ClrScr;
 	
 	case (opcion) of

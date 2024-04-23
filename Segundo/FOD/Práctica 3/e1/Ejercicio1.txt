@@ -1,6 +1,1 @@
-Leo L > Edad: 42 - DNI: -10672 | Empleado N.1
-Damian D > Edad: 70 - DNI: -4996 | Empleado N.2
-Ezequiel E > Edad: 22 - DNI: 6858 | Empleado N.3
-Gudi G > Edad: 22 - DNI: 4442 | Empleado N.4
-Zack Z > Edad: 2 - DNI: 484 | Empleado N.5
-Swunder S > Edad: 63 - DNI: 0 | Empleado N.6
+Leo Luna > Edad: 19 - DNI: 1234 | Empleado N.3
