@@ -1,0 +1,14 @@
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\bin\Debug\net8.0\Práctica 6.exe
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\bin\Debug\net8.0\Práctica 6.deps.json
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\bin\Debug\net8.0\Práctica 6.runtimeconfig.json
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\bin\Debug\net8.0\Práctica 6.dll
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\bin\Debug\net8.0\Práctica 6.pdb
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\Práctica 6.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\Práctica 6.AssemblyInfoInputs.cache
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\Práctica 6.AssemblyInfo.cs
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\Práctica 6.csproj.CoreCompileInputs.cache
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\Práctica 6.dll
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\refint\Práctica 6.dll
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\Práctica 6.pdb
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\Práctica 6.genruntimeconfig.cache
+c:\Users\User\Desktop\Leo\Facultad\Segundo\Seminario de Lenguajes\Práctica 6\obj\Debug\net8.0\ref\Práctica 6.dll
