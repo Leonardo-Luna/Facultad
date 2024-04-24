@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Práctica 7.csproj": {}
+    "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Almacen\\Almacen.Aplicacion\\Almacen.Aplicacion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Práctica 7.csproj": {
+    "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Almacen\\Almacen.Aplicacion\\Almacen.Aplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Práctica 7.csproj",
-        "projectName": "Práctica 7",
-        "projectPath": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Práctica 7.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Almacen\\Almacen.Aplicacion\\Almacen.Aplicacion.csproj",
+        "projectName": "Almacen.Aplicacion",
+        "projectPath": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Almacen\\Almacen.Aplicacion\\Almacen.Aplicacion.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Leo\\Facultad\\Segundo\\Seminario de Lenguajes\\Práctica 7\\Almacen\\Almacen.Aplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
