@@ -74,28 +74,6 @@ begin
 
 end;
 
-procedure exportarTxt(var a: archivo; var aTxt: Text);
-var
-
-	dato: integer;
-	
-begin
-
-	rewrite(aTxt);
-	reset(a);
-	
-	while(not eof(a)) do begin
-	
-		read(a, dato);
-		writeln(aTxt, dato);
-	
-	end;
-	
-	close(aTxt);
-	close(a);
-
-end;
-
 procedure altaDatos(var a: archivo);
 var
 
@@ -136,6 +114,28 @@ begin
 	
 	end;
 	
+	close(a);
+
+end;
+
+procedure exportarTxt(var a: archivo; var aTxt: Text);
+var
+
+	dato: integer;
+	
+begin
+
+	rewrite(aTxt);
+	reset(a);
+	
+	while(not eof(a)) do begin
+	
+		read(a, dato);
+		writeln(aTxt, dato);
+	
+	end;
+	
+	close(aTxt);
 	close(a);
 
 end;
