@@ -1,0 +1,31 @@
+5) Defina los siguientes conceptos:
+
+- Overflow
+
+Cuando se intenta insertar un elemento en un nodo que se encuentra llenos se produce Overflow, por lo tanto hay que partirlo para poder seguir.
+
+La primera mitad de las claves se mantiene en el nodo con Overflow.
+La segunda mitad de las claves se traslada al nuevo nodo.
+La menor de las claves de la segunda mitad se promociona al nodo padre.
+
+En caso de órdenes impares (cantidad máxima de nodos) se debe promocionar la clave/copia que se encuentra en la posición del medio.
+
+- Underflow
+
+Cuando se eliminan elementos y quedan menos de la cantidad mínima ([M/2] - 1) se produce Underflow, por lo tanto se debe realizar una redistribución de las claves. Si esta no es posible, entonces debe realizarse una fusión.
+
+- Redistribución
+
+Se deben seguir las políticas de redistribución:
+Política izquierda: Se intenta redistribuir con el hermano adyacente izquierdo, si no es posible, se fusiona con el hermano adyacente izquierdo.
+Política derecha: Se intenta redistribuir con el hermano adyacente derecho, si no es posible, se fusiona con el hermano adyacente derecho.
+
+Política de izquierda o derecha/derecha o izquierda: Se intenta redistribuir con el hermano adyacente izquierdo/derecho, si no es posible, se intenta redistribuir con el hermano adyacente derecho/izquierdo. En caso de ninguna se posible, se fusiona con el hermano adyacente izquierdo/derecho.
+
+- Fusión/Concatenación
+
+Si un nodo adyacente hermano está en su cantidad mínima de elementos (por lo tanto no puede redistribuirse), se concatena con un nodo adyacente disminuyendo la cantidad de nodos, y en algunos casos, la altura del árbol.
+
+Ante un caso de Underflow primero debe intentar realizarse la redistribución al hermano adyacente si está en condiciones de ceder elementos. Si no es posible, se realiza la fusión, caso en el cual *puede* producirse un Overflow.
+
+En los últimos dos casos, ¿cuándo se aplica cada uno?
