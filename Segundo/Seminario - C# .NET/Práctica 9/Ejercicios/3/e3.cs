@@ -29,6 +29,7 @@ class e3
     {
 
         return (T?)Activator.CreateInstance(obj.GetType());
+        //return obj? preguntar si está bien
 
     }
 
