@@ -4,7 +4,7 @@ class e4
     public static void Ejecutar()
     {
 
-        var lista = new ListaEnlazada<int>();
+        var lista = new LinkedList<int>();
 
         lista.AgregarAdelante(3);
         lista.AgregarAdelante(100);
@@ -19,13 +19,6 @@ class e4
             Console.Write(i + " ");
         }
         Console.WriteLine();
-
-    }
-
-    public static T ListaEnlazada<T>()
-    {
-
-        return 
 
     }
 
