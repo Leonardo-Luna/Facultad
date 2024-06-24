@@ -124,9 +124,8 @@ public class GeneralTree<T>{
 		
 	}
 	
-	public List<Integer> Traversal(GeneralTree<Integer> a) {
+	public void Traversal(GeneralTree<Integer> a) {
 		
-		List<Integer> lista = new LinkedList<Integer>();
 		GeneralTree<Integer> aux;
 		
 		Queue<GeneralTree<Integer>> q = new Queue<GeneralTree<Integer>>();
@@ -144,8 +143,6 @@ public class GeneralTree<T>{
 			}
 			
 		}
-		
-		return lista;
 		
 	}
 	

@@ -2,7 +2,7 @@ Program ejer2;
 
 const
 
-valorAlto = 9999;
+	valorAlto = 9999;
 
 type
 
