@@ -7,11 +7,11 @@ public class Ticket {
 	private double pesoTotal;
 	private double precioTotal;
 	
-	public Ticket(Balanza b) {
+	public Ticket(int cant, double peso, double precio) {
 		this.fecha = LocalDate.now()
-		this.cantidadDeProductos = b.getCantidadDeProductos();
-		this.pesoTotal = b.getPesoTotal();
-		this.precioTotal = b.getPrecioTotal;
+		this.cantidadDeProductos = cant;
+		this.pesoTotal = peso;
+		this.precioTotal = precio;
 	}
 	
 	public double impuesto() {

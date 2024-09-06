@@ -22,7 +22,7 @@ public class Balanza {
 	}
 	
 	public Ticket emitirTicket() {
-		Ticket t = new Ticket(this);
+		Ticket t = new Ticket(this.cantidadDeProductos, this.pesoTotal, this.precioTotal);
 		return t;
 	}
 	

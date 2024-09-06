@@ -9,7 +9,7 @@ public class WallPostImpl implements WallPost {
 	private boolean featured;
 	
 	public WallPostImpl() {
-		this.text = "Undefined Post";
+		this.text = "Undefined post";
 		this.likes = 0;
 		this.featured = false;
 	}
@@ -31,14 +31,16 @@ public class WallPostImpl implements WallPost {
 	}
 	
 	public void dislike() {
-		this.likes--;
+		if(this.likes > 0) {
+			this.likes--;
+		}
 	}
 	
 	public boolean isFeatured() {
 		return this.featured;
 	}
 
-	public void toggleFeatued() {
+	public void toggleFeatured() {
 		this.featured = !this.featured;
 	}
 	
