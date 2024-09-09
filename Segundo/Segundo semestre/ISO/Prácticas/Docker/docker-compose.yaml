@@ -1,0 +1,6 @@
+services:
+    leo-iso:
+        build: . 
+        volumes:
+            - ./:/ISO
+        command: sh -c "tail -F anything"

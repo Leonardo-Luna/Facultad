@@ -1,0 +1,24 @@
+# Crear grupo, usuario y agregar el usuario al grupo
+
+groupapp catedra
+sudo useradd -d "/home/iso_2017" -m iso2017
+sudo usermod -a -G catedra iso2017
+
+# Revisar archivos
+
+cat /etc/passwd | grep "iso2017" && cat /etc/group | grep "catedra"
+
+# Crear archivo
+
+cd /home/iso_2017
+touch ejemplo.txt
+
+# Eliminar usuario
+
+userdel iso2017
+
+# Revisar archivos post-eliminación
+
+cat /etc/passwd | grep "iso2017"
+
+
