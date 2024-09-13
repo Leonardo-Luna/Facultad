@@ -65,7 +65,7 @@ public class BalanzaTest {
 
     queso.setPrecioPorKilo(200);
     jamon.setPrecioPorKilo(160);
-    assertEquals(36, ticket.getPrecioTotal());
+    assertEquals(23, ticket.getPrecioTotal());
   }
 
   @Test

@@ -6,11 +6,15 @@ import java.util.*;
 public class Ticket {
 
 	private LocalDate fecha;
-	private List<Producto> listaProductos;
+    private int cantidadDeProductos;
+    private double pesoTotal;
+    private double precioTotal;
 	
 	public Ticket(List<Producto> prod) {
 		this.fecha = LocalDate.now();
-		this.listaProductos = prod;
+		this.cantidadDeProductos = prod.size();
+		this.pesoTotal = prod.stream().mapToDouble(p -> p.getPeso()).sum();
+		this.precioTotal = prod.stream().mapToDouble(p -> p.getPrecio()).sum();
 	}
 	
 	public LocalDate getFecha() {
@@ -18,21 +22,19 @@ public class Ticket {
 	}
 	
 	public int getCantidadDeProductos() {
-		return this.listaProductos.size();
+		return this.cantidadDeProductos;
 	}
 	
 	public double getPrecioTotal() {
-		System.out.println(this.listaProductos.size());
-		System.out.println(this.listaProductos.stream().mapToDouble(Producto::getPrecio).sum());
-		return this.listaProductos.stream().mapToDouble(Producto::getPrecio).sum();
+		return this.precioTotal;
 	}
 	
 	public double getPesoTotal() {
-		return this.listaProductos.stream().mapToDouble(Producto::getPeso).sum();
+		return this.pesoTotal;
 	}
 	
 	public double impuesto() {
-		return listaProductos.stream().mapToDouble(Producto::getPrecio).sum()*0.21;
+		return this.precioTotal*0.21;
 	}
 	
 }
