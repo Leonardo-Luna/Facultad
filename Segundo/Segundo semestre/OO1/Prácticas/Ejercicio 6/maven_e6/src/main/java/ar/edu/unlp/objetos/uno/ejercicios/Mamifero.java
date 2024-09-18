@@ -64,18 +64,18 @@ public class Mamifero extends Object {
 			return true;
 		}
 		
-		boolean madre = false;
-		boolean padre = false;
+		boolean busquedaMadre = false;
+		boolean busquedaPadre = false;
 		
 		if(this.madre != null) {
-			madre = this.madre.tieneComoAncestroA2(m);
+			busquedaMadre = this.madre.tieneComoAncestroA2(m);
 		}
 		
-		if(this.padre != null) {
-			padre = this.padre.tieneComoAncestroA2(m);
+		if((!busquedaMadre) && (this.padre != null) {
+			busquedaPadre = this.padre.tieneComoAncestroA2(m);
 		}
 		
-		return madre || padre;
+		return busquedaMadre || busquedaPadre;
 	}
 	
 	public String getIdentificador() {
