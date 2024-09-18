@@ -93,16 +93,16 @@ public class MamiferoTest {
 
 	@Test
 	void testTieneComoAncestroA() {
-		assertFalse(nala.tieneComoAncestroA(anonimo));
-		assertFalse(mufasa.tieneComoAncestroA(anonimo));
-		assertFalse(alexa.tieneComoAncestroA(anonimo));
-		assertFalse(alexa.tieneComoAncestroA(alexa));
-		assertTrue(alexa.tieneComoAncestroA(mufasa));
-		assertTrue(alexa.tieneComoAncestroA(sarabi));
-		assertTrue(alexa.tieneComoAncestroA(nala));
-		assertTrue(alexa.tieneComoAncestroA(melquiades));
-		assertTrue(alexa.tieneComoAncestroA(elsa));
-		assertTrue(alexa.tieneComoAncestroA(scar));
+		assertFalse(nala.tieneComoAncestroA2(anonimo));
+		assertFalse(mufasa.tieneComoAncestroA2(anonimo));
+		assertFalse(alexa.tieneComoAncestroA2(anonimo));
+		assertFalse(alexa.tieneComoAncestroA2(alexa));
+		assertTrue(alexa.tieneComoAncestroA2(mufasa));
+		assertTrue(alexa.tieneComoAncestroA2(sarabi));
+		assertTrue(alexa.tieneComoAncestroA2(nala));
+		assertTrue(alexa.tieneComoAncestroA2(melquiades));
+		assertTrue(alexa.tieneComoAncestroA2(elsa));
+		assertTrue(alexa.tieneComoAncestroA2(scar));
 	}
 
 	@Test
@@ -117,10 +117,10 @@ public class MamiferoTest {
 		aaron.setMadre(anna);
 		anna.setPadre(alexander);
 
-		assertTrue(alice.tieneComoAncestroA(anna));
-		assertTrue(alice.tieneComoAncestroA(aaron));
-		assertTrue(alice.tieneComoAncestroA(alexander));
-		assertFalse(alice.tieneComoAncestroA(nala));
-		assertFalse(alice.tieneComoAncestroA(alice));
+		assertTrue(alice.tieneComoAncestroA2(anna));
+		assertTrue(alice.tieneComoAncestroA2(aaron));
+		assertTrue(alice.tieneComoAncestroA2(alexander));
+		assertFalse(alice.tieneComoAncestroA2(nala));
+		assertFalse(alice.tieneComoAncestroA2(alice));
 	}
 }

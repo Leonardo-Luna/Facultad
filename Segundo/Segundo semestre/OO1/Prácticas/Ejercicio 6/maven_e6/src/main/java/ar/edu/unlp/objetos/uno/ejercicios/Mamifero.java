@@ -37,19 +37,45 @@ public class Mamifero extends Object {
 	
 	public boolean tieneComoAncestroA(Mamifero m) {
 		
+		if((this.madre == m) || (this.padre == m)) {
+			return true;
+		}
+		else {
+			
+			boolean aux = false;
+			
+			if(this.madre != null) {
+				aux = aux || this.madre.buscarAncestros(m);
+			}
+			
+			if(this.padre != null) {
+				aux = aux || this.padre.buscarAncestros(m);
+			}
+	
+			return aux;
+			
+		}
+		
+	}
+	
+	public boolean tieneComoAncestroA2(Mamifero m) {
+		
+		if((this.padre == m) || (this.madre == m)) {
+			return true;
+		}
+		
 		boolean madre = false;
 		boolean padre = false;
 		
 		if(this.madre != null) {
-			madre = this.madre.buscarAncestros(m);
+			madre = this.madre.tieneComoAncestroA2(m);
 		}
 		
 		if(this.padre != null) {
-			padre = this.padre.buscarAncestros(m);
+			padre = this.padre.tieneComoAncestroA2(m);
 		}
-
-		return madre || padre;
 		
+		return madre || padre;
 	}
 	
 	public String getIdentificador() {
