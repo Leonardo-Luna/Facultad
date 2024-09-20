@@ -4,20 +4,24 @@ import java.util.*;
 public class Farola extends Object {
 	
 	private boolean status; // true = on ; false = off
-	private LinkedList<Farola> neighbors;
+	private List<Farola> neighbors;
 	
 	public Farola() {
 		this.status = false;
-		this.neighbors = new LinkedList<Farola>();
+		this.neighbors = new ArrayList<Farola>();
 	}
 	
 	public void pairWithNeighbor(Farola f) {
 		this.neighbors.add(f);
-		f.neighbors.add(this); // O implementar un método que haga esto en caso de que esté mal
+		f.agregarFarola(this);
+	}
+	
+	public void agregarFarola(Farola f) {
+		this.neighbors.add(f);
 	}
 	
 	public List<Farola> getNeighbors() {
-		return this.neighbors;
+		return new ArrayList<Farola>(this.neighbors);
 	}
 	
 	public void turnOn() {

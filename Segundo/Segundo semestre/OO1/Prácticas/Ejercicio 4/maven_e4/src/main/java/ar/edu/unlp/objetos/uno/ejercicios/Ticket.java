@@ -9,12 +9,16 @@ public class Ticket {
     private int cantidadDeProductos;
     private double pesoTotal;
     private double precioTotal;
+    private List<Producto> lista;
 	
-	public Ticket(List<Producto> prod) {
+	public Ticket(List<Producto> prod, int cant, double peso, double precio) {
 		this.fecha = LocalDate.now();
-		this.cantidadDeProductos = prod.size();
-		this.pesoTotal = prod.stream().mapToDouble(p -> p.getPeso()).sum();
-		this.precioTotal = prod.stream().mapToDouble(p -> p.getPrecio()).sum();
+		this.cantidadDeProductos = cant;
+		this.pesoTotal = peso;
+		this.precioTotal = precio;
+		this.lista = prod;
+		
+		// El ticket no debe encargarse de calcular nada. Solo de imprimir.
 	}
 	
 	public LocalDate getFecha() {

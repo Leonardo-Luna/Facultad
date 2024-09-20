@@ -19,7 +19,11 @@ public class Balanza {
 	}
 	
 	public Ticket emitirTicket() {
-		Ticket t = new Ticket(this.productos);
+		int cant = this.productos.size();
+		double peso = this.productos.stream().mapToDouble(p -> p.getPeso()).sum();
+		double precio = this.productos.stream().mapToDouble(p -> p.getPrecio()).sum();
+		
+		Ticket t = new Ticket(this.productos, cant, peso, precio);	
 		return t;
 	}
 	

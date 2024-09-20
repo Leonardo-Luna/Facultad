@@ -35,7 +35,9 @@ public class Mamifero extends Object {
 		}
 	}
 	
-	public boolean tieneComoAncestroA(Mamifero m) {
+	// Ambas implementaciones del método "tieneComoAncestroA" son correctas. Chequeado por ayudantes.
+	
+	public boolean tieneComoAncestroA(Mamifero m) { // Implementación en 2 métodos
 		
 		if((this.madre == m) || (this.padre == m)) {
 			return true;
@@ -58,7 +60,7 @@ public class Mamifero extends Object {
 		
 	}
 	
-	public boolean tieneComoAncestroA2(Mamifero m) {
+	public boolean tieneComoAncestroA2(Mamifero m) { // Implementación en un método
 		
 		if((this.padre == m) || (this.madre == m)) {
 			return true;
@@ -71,7 +73,7 @@ public class Mamifero extends Object {
 			busquedaMadre = this.madre.tieneComoAncestroA2(m);
 		}
 		
-		if((!busquedaMadre) && (this.padre != null) {
+		if((!busquedaMadre) && (this.padre != null)) {
 			busquedaPadre = this.padre.tieneComoAncestroA2(m);
 		}
 		
