@@ -12,4 +12,5 @@
 
 #### e) ¿Cómo se declara en Java un método abstracto? ¿Es obligatorio implementarlo? ¿Qué dice el compilador de Java si una subclase no implementa un método abstracto que hereda?
 - "public abstract [retorno] [nombre]", en la clase que se declara el método no se debe implementar, solo sirve como molde para sus subclases.
+
 Si no se implementa en la clase correspondiente, el compilador da el siguiente mensaje "The type CajaDeAhorro/CuentaCorriente must implement the inherited abstract method Cuenta.nombre()."
