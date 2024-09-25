@@ -9,23 +9,15 @@ public class CuentaCorriente extends Cuenta {
 		this.limiteDeDescubierto = 0;
 	}
 	
-	public void setLimiteDeDescubierto(double monto) {
+	public void setLimite(double monto) {
 		this.limiteDeDescubierto = monto;
 	}
 	
-	public double getLimiteDeDescubierto() {
+	public double getLimite() {
 		return this.limiteDeDescubierto;
 	}
 	
-	@Override
-	public boolean extraer(double monto) {
-		double saldo = super.getSaldo();
-		saldo += this.getLimiteDeDescubierto();
-		
-		if(saldo >= monto) {
-			super.extraerSinControlar(monto);
-			return true;
-		}
-		return false;
-	} 
+	protected boolean puedeExtraer(double monto) {
+		return super.getSaldo()+this.getLimite() >= (monto);
+	}
 }

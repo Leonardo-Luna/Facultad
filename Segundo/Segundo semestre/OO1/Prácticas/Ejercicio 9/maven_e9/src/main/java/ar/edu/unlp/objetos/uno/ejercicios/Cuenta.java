@@ -20,12 +20,7 @@ public abstract class Cuenta {
 		this.saldo -= monto;
 	}
 	
-	protected boolean puedeExtraer(double monto) {
-		if(this.saldo >= monto) {
-			return true;
-		}
-		return false;
-	}
+	protected abstract boolean puedeExtraer(double monto);
 	
 	public boolean extraer(double monto) {
 		if(this.puedeExtraer(monto)) {
@@ -43,7 +38,4 @@ public abstract class Cuenta {
 		}
 		return false;
 	}
-	
-	public abstract void nombre();
-	
 }
