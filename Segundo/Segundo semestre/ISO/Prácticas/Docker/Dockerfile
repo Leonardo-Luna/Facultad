@@ -1,4 +1,4 @@
 FROM debian:latest
 RUN mkdir ISO
 WORKDIR /ISO
-RUN apt-get update && apt-get install psmisc -y && apt-get install sudo -y && apt-get install vim -y && apt-get install procps -y && apt-get install man -y
+RUN apt-get update && apt-get install psmisc sudo vim procps man -y
