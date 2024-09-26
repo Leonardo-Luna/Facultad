@@ -9,7 +9,7 @@ public class CajaDeAhorro extends Cuenta {
 	}
 	
 	protected boolean puedeExtraer(double monto) {
-		return super.getSaldo() >= (monto + (monto*0.02)) ? true : false;
+		return this.getSaldo() >= (monto + (monto*0.02));
 	}
 
 	@Override

@@ -1,5 +1,5 @@
 #### a) ¿Por qué cree que este ejercicio se llama "Cuenta gon ganchos"?
-- Podría llamarse de esa manera debido a que se está utilizando una jerarquía y las clases parecen estar conectadas con ganchos entre sí.
+- Se llama de esta manera debido a que los métodos se van enganchando (hooks). Un método "padre" tiene submétodos hooks que se pueden re-implementar (Override) para que el "padre" cumpla con la funcionalidad esperada.
 
 #### b) En las implementaciones de los métodos extraer() y transferirACuenta() que se ven en el diagrama, ¿quién es this? ¿Puede decir de qué clase es this?
 - "this" hace referencia a una instancia de la clase CajaDeAhorro o CuentaCorriente dentro de la clase Cuenta. (?)

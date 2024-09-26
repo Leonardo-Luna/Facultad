@@ -24,6 +24,12 @@ public abstract class JobScheduler {
         return jobs;
     }
 
-    public abstract JobDescription next();
+    public JobDescription next() {
+    	JobDescription nextJob = this.getNext();
+        this.unschedule(nextJob);
+        return nextJob;
+    }
+    
+    public abstract JobDescription getNext();
 
 }
