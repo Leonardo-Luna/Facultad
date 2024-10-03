@@ -6,6 +6,7 @@ if [ $# -lt 1 ]; then
 else
 
 	i=1
+	cant=0
 	
 	for param in $@; do
 		
@@ -21,10 +22,13 @@ else
 				fi
 			else # Si no existe, lo informo
 				echo "$param no existe"
+				let cant++
 			fi
 		fi
 		let i++
 	
 	done
+
+	echo "De los archivos ingresados en posiciones impares ${cant} no existen"
 
 fi

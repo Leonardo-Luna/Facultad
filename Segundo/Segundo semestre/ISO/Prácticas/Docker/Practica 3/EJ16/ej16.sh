@@ -19,3 +19,6 @@ fi
 
 # Se debe verificar sobre TODOS los usuarios del sistema o solo los de personas?
 # Que tan mal esta el for que recorre los archivos? Seria mejor implementarlo con un wc -l?
+#
+# Post consulta: Mi manera está bien pero es "excesiva", se podría hacer filtrando por los usuarios que
+# tengan el home en /home/* y listo. Tambien filtrando por los usuarios que tengan UID >= 1000.

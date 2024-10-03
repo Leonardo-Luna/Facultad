@@ -5,22 +5,25 @@ if [ $# -ne 1 ]; then
 	exit 1
 else
 
-	cant=0
+	cantW=0
+	cantR=0
 
-	if [ -e $1 ]; then
+	if [ -d $1 ]; then
 		
 		for arch in `ls $1`; do
 			
 			ruta="$1"/"$arch"
 			if [ -f $ruta ]; then
-				if [ -r $ruta ] && [ -w $ruta ]; then
-					let cant++
+				if [ -r $ruta ]; then
+					let cantR++
+				elif [ -w $ruta ]; then
+					let cantW++	
 				fi
 			fi
 
 		done
 
-		echo "En el directorio $1 tiene permiso de lectura y escritura sobre $cant archivos"
+		echo "En el directorio $1 tiene permiso de lectura sobre ${cantR} y escritura sobre ${cantW} archivos"
 
 	else
 		echo "El directorio buscado no existe"
