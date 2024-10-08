@@ -1,0 +1,22 @@
+package ar.edu.unlp.objetos.uno.ejercicios;
+
+public class Cilindro extends Pieza {
+
+	private int radio;
+	private int altura;
+	
+	public Cilindro(String material, String color, int radio, int altura) {
+		super(material, color);
+		this.radio = radio;
+		this.altura = altura;
+	}
+	
+	public double calcularVolumen() {
+		return Math.PI * Math.pow(this.radio, 2) * this.altura;
+	}
+	
+	public double calcularSuperficie() {
+		return 2 * Math.PI * this.radio * this.altura * Math.PI * (Math.pow(this.radio, 2));
+	}
+	
+}
