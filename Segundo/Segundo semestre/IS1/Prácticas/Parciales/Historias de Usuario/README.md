@@ -13,3 +13,7 @@
 [Parcial 3]
 
 - Es correcto realizar todas las acciones de suma y procesamiento de puntos en el entonces?
+
+[Parcial 4]
+
+- Está bien planteado el listado de noticias? La conexión con el servidor, etc.
