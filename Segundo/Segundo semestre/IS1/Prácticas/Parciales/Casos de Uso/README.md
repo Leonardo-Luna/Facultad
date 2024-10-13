@@ -7,3 +7,7 @@
 [Parcial 2]
 
 - Habría que hacer jerarquía entre el empleado, supervisor y persona? Todas pueden saldar una multa.
+
+[Parcial 3]
+
+- Preguntar por los pasos alternativos del "Consultar listado".
