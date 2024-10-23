@@ -2,18 +2,14 @@ package ar.edu.unlp.objetos.uno.ejercicios;
 
 public class CuadroTarifario {
 
-	private double costo;
+	private double preciokWh;
 	
-	public CuadroTarifario(double c) {
-		this.costo = c;
+	public void setPrecio(double p) {
+		this.preciokWh = p;
 	}
 	
-	public double getCosto() {
-		return this.costo;
-	}
-	
-	public void setCosto(double c) {
-		this.costo = c;
+	public double getPrecio() {
+		return this.preciokWh;
 	}
 	
 }
