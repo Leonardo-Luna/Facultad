@@ -1,0 +1,25 @@
+services:
+
+  mysql:
+    image: mysql:9.1.0
+    container_name: ej1-sql
+    ports:
+      - 3006:3306
+    environment:
+      MYSQL_DATABASE: ejercicio1
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./Dumps/ejercicio1.sql:/docker-entrypoint-initdb.d/ejercicio1.sql
+
+  mysql2:
+    image: mysql:9.1.0
+    container_name: ej2-sql
+    ports:
+      - 3007:3307
+    environment:
+      MYSQL_DATABASE: ejercicio2
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./Dumps/ejercicio2.sql:/docker-entrypoint-initdb.d/ejercicio2.sql
+      
+
