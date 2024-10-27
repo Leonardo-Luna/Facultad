@@ -1,3 +1,6 @@
+-- Listar nombre, apellido, DNI, teléfono y dirección de clientes que realizaron compras solamente
+-- durante 2017.
+
 SELECT DISTINCT c.nombre, c.apellido, c.DNI, c.telefono, c.direccion FROM Cliente c
 INNER JOIN Factura f
 ON (c.idCliente = f.idCliente)
