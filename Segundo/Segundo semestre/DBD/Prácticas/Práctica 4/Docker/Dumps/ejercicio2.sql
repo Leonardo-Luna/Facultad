@@ -41,7 +41,7 @@ CREATE TABLE `Arbol` (
 
 LOCK TABLES `Arbol` WRITE;
 /*!40000 ALTER TABLE `Arbol` DISABLE KEYS */;
-INSERT INTO `Arbol` VALUES (1,'Eucalipto',5,'Av. Libertador',100,1001),(2,'Pino',10,'Calle Falsa',200,2002),(3,'Roble',15,'Calle Mayor',300,3003),(4,'Sauce',3,'Calle Menor',400,4004),(5,'Ciprs',7,'Calle Larga',500,5005),(10,'Eucalipto',5,'Av. Libertador',100,101),(11,'Pino',10,'Calle Falsa',200,202),(12,'Roble',15,'Calle Mayor',300,303),(13,'Sauce',3,'Calle Menor',400,404),(14,'Ciprs',7,'Calle Larga',500,505),(15,'lamo',12,'Calle Nueva',600,606),(16,'Conferas',8,'Calle Secundaria',700,707);
+INSERT INTO `Arbol` VALUES (10,'Coniferas',20,'Calle A',123,1000),(11,'Pino',15,'Calle B',456,1000),(12,'Roble',30,'Calle C',789,2000),(13,'Eucalipto',25,'Calle D',101,3000),(14,'Fresno',40,'Calle E',112,4000),(15,'Coniferas',10,'Calle F',131,5000),(16,'Jacarand',8,'Calle G',415,6000),(17,'Cedro',12,'Calle H',789,7000),(18,'Pino',18,'Calle I',321,8000),(19,'Roble',50,'Calle J',654,9000);
 /*!40000 ALTER TABLE `Arbol` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,7 +67,7 @@ CREATE TABLE `Localidad` (
 
 LOCK TABLES `Localidad` WRITE;
 /*!40000 ALTER TABLE `Localidad` DISABLE KEYS */;
-INSERT INTO `Localidad` VALUES (101,'Centro','Zona comercial y cultural',15000),(202,'Norte','rea residencial con parques',12000),(303,'Sur','Sector industrial y comercial',8000),(404,'Este','Zona de oficinas y negocios',5000),(505,'Oeste','rea rural y agrcola',3000),(606,'La Plata','Localidad educativa',20000),(707,'Salta','Zona turstica y cultural',18000),(1001,'Centro','Zona comercial y cultural',15000),(2002,'Norte','rea residencial con parques',12000),(3003,'Sur','Sector industrial y comercial',8000),(4004,'Este','Zona de oficinas y negocios',5000),(5005,'Oeste','rea rural y agrcola',3000);
+INSERT INTO `Localidad` VALUES (1000,'La Plata','Ciudad capital de la provincia de Buenos Aires',800000),(1001,'Mar del Plata','Ciudad en la costa de Buenos Aires',500000),(2000,'Salta','Ciudad capital de la provincia de Salta',600000),(3000,'Cordoba','Ciudad capital de la provincia de Cordoba',1500000),(4000,'Rosario','Ciudad en la provincia de Santa Fe',1200000),(5000,'Mendoza','Ciudad capital de la provincia de Mendoza',1150000),(6000,'Neuquen','Ciudad capital de la provincia de Neuquen',300000),(7000,'Tucuman','Ciudad capital de la provincia de Tucuman',900000),(8000,'Jujuy','Ciudad capital de la provincia de Jujuy',400000),(9000,'Santa Fe','Ciudad capital de la provincia de Santa Fe',700000);
 /*!40000 ALTER TABLE `Localidad` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,7 +97,7 @@ CREATE TABLE `Poda` (
 
 LOCK TABLES `Poda` WRITE;
 /*!40000 ALTER TABLE `Poda` DISABLE KEYS */;
-INSERT INTO `Poda` VALUES (1,'2023-06-15',12345678,1),(2,'2023-07-20',23456789,2),(3,'2023-08-10',34567890,3),(4,'2023-09-05',45678901,4),(5,'2023-10-01',56789012,5),(10,'2022-06-15',10000001,10),(11,'2023-07-20',20000002,11),(12,'2023-08-10',30000003,12),(13,'2022-09-05',40000004,13),(14,'2024-01-01',60000006,14),(15,'2023-10-01',70000007,15);
+INSERT INTO `Poda` VALUES (10,'2023-03-15',22234566,10),(11,'2023-05-20',33345677,11),(12,'2022-08-10',44456788,12),(13,'2023-06-30',55567899,13),(14,'2022-09-05',66678900,14),(15,'2024-02-18',88890122,15),(16,'2024-04-22',99901233,16),(17,'2023-07-13',22234566,12),(18,'2023-11-20',33345677,18),(19,'2022-12-01',44456788,19);
 /*!40000 ALTER TABLE `Poda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +113,7 @@ CREATE TABLE `Podador` (
   `nombre` varchar(50) DEFAULT NULL,
   `apellido` varchar(50) DEFAULT NULL,
   `telefono` varchar(25) DEFAULT NULL,
-  `fnac` varchar(50) DEFAULT NULL,
+  `fnac` date DEFAULT NULL,
   `codigoPostalVive` int DEFAULT NULL,
   PRIMARY KEY (`DNI`),
   KEY `codigoPostalVive` (`codigoPostalVive`),
@@ -127,7 +127,7 @@ CREATE TABLE `Podador` (
 
 LOCK TABLES `Podador` WRITE;
 /*!40000 ALTER TABLE `Podador` DISABLE KEYS */;
-INSERT INTO `Podador` VALUES (10000001,'Juan','Prez','555-1234','1980-01-15',101),(12345678,'Juan','Prez','555-1234','1980-01-15',1001),(20000002,'Jos','Garca','555-2345','1990-02-20',202),(23456789,'Mara','Gmez','555-2345','1990-02-20',2002),(30000003,'Luis','Martnez','555-3456','1985-03-25',303),(34567890,'Luis','Martnez','555-3456','1985-03-25',3003),(40000004,'Ana','Rodrguez','555-4567','1975-04-30',404),(45678901,'Ana','Rodrguez','555-4567','1975-04-30',4004),(50000005,'Carlos','Hernndez','555-5678','1995-05-05',505),(56789012,'Carlos','Hernndez','555-5678','1995-05-05',5005),(60000006,'Mara','Zapata','555-6789','1988-06-15',606),(70000007,'Miguel','Serrano','555-7890','1982-07-20',707);
+INSERT INTO `Podador` VALUES (11112334,'Luis','Tomas','987123654','1991-06-15',8000),(22223445,'Clara','Hernandez','456123789','1989-09-09',9000),(22234566,'Juan','Perez','123456789','1990-05-10',1000),(33345677,'Jose','Garcia','987654321','1985-07-22',1000),(44456788,'Ana','Lopez','456789123','1992-03-15',2000),(55567899,'Maria','Rodriguez','321654987','1988-12-30',3000),(66678900,'Carlos','Gonzalez','789123456','1995-08-08',4000),(77789011,'Marta','Martinez','654321987','1993-11-25',5000),(88890122,'Raul','Balata','213546879','1980-02-02',6000),(99901233,'Lucia','Zapata','321789654','1987-01-11',7000);
 /*!40000 ALTER TABLE `Podador` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -140,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-26 16:58:28
+-- Dump completed on 2024-10-27 20:59:25
