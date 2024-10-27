@@ -4,5 +4,5 @@
 SELECT DNI, apellido, nombre
 FROM Cliente c
 INNER JOIN Factura f ON (c.idCliente = f.idCliente)
-GROUP BY f.total, DNI, apellido, nombre
-HAVING f.total > 10000000;
+GROUP BY DNI, apellido, nombre
+HAVING sum(f.total) > 10000000;
