@@ -4,6 +4,10 @@ public class CuadroTarifario {
 
 	private double preciokWh;
 	
+	public CuadroTarifario(double p) {
+		this.preciokWh = p;
+	}
+	
 	public void setPrecio(double p) {
 		this.preciokWh = p;
 	}
