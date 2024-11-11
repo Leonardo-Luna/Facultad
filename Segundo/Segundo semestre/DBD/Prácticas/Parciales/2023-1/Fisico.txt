@@ -1,0 +1,12 @@
+Persona = (--DNI--, fechaNacimiento, nombre, apellido, calle, numero, piso?, dpto?)
+Cliente = (--DNI (fk)--, calificacionCredilicia?)
+Empleado = (--CUIL--, DNI (fk), telefono)
+Telefono = (--numero--)
+Prestamo = (--numero, numero--, fecha, tasaInteres, nroCuotas, monto)
+Sucursal = (--numero--, nombre)
+
+Cliente_Telefono = (--CUIL (fk)--, numero (fk))
+Cliente_Prestamo = (--DNI (fk)--, numero (fk), numero (fk))
+Empleado_Prestamo = (--CUIL (fk)--, numero, numero)
+Empleado_supervisa_Sucursal = (--CUIL (fk)--, numero (fk))
+Empleado_trabaja_Surucrsal = (--CUIL (fk)--, numero (fk))
