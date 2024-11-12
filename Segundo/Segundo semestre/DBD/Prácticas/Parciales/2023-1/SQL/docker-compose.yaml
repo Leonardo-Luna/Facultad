@@ -1,0 +1,14 @@
+services:
+
+  mysql:
+    image: mysql:9.1.0
+    container_name: PrimeraFecha2023
+    ports:
+      - 3006:3306
+    environment:
+      MYSQL_DATABASE: parcial
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./Dumps/:/sql
+      
+
