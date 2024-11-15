@@ -19,6 +19,7 @@ public class Viaje {
 		this.costoTotal = c;
 		this.fecha = f;
 		this.vehiculo = v;
+		this.integrantes = new ArrayList<Usuario>();
 	}
 	
 	public boolean getDias() {
@@ -41,7 +42,7 @@ public class Viaje {
 	}
 	
 	public boolean procesarViaje() {
-		double parte = this.costoTotal / this.integrantes.size()+1;
+		double parte = this.costoTotal / this.integrantes.size();
 		this.integrantes.stream().forEach(i -> i.procesarPasaje(parte));
 		return true;
 	}

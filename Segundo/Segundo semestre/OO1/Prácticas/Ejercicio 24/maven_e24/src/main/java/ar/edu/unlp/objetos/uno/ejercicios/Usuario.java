@@ -16,7 +16,7 @@ public abstract class Usuario {
 	}
 	
 	protected double getSaldo() {
-		return this.getSaldo();
+		return this.saldo;
 	}
 	
 	protected boolean descontarSaldo(double saldo) {
