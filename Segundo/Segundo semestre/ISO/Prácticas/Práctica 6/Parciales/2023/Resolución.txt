@@ -10,9 +10,9 @@ B) Algoritmo: FCFS o RR TV Q=3
 
 C)
 Proceso		TR			TE
-Tarea 1		10			5				
-Tarea 2		12			8
-Tarea 3		11			8		
+Tarea 1		9			4				
+Tarea 2		11			7
+Tarea 3		10			7		
 
 TPR = 11
 TPE = 7
