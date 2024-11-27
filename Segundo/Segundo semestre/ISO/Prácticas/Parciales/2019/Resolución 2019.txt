@@ -1,0 +1,29 @@
+1)
+
+JOB		Llegada		CPU		E/S (src, inst, dur)		TR		TE
+1		0			4		(sda, 2, 3) (sdc, 4, 2)		10		6
+2		3			4		(sda, 1, 2)					9		5
+3		3			3		(sdb, 2, 3)					7		4
+
+b) RR TF Q=2
+c) 8,6
+d) 5
+
+3)
+a) Perjudica a los CPU Bound ya que los procesos I/O Bound son propensos a terminar su ejecución prematuramente debido a una interrupción.
+b) El algoritmo puede provocar inanción a los procesos que sean encolados en la cola de menor prioridad, ya que si siguen llegando procesos que se encolan en la de mayor priodad, estos no se ejecutarían.
+
+3)
+
+	1	2	4	2	1M	3	4M	1M	6	2M	1M	4M	7	5	3
+1	1	1	1	1	1M*	1M				2M	2M	2M		5	5
+2		2	2	2*	2*	2	2	1M	1M	1M	1M*	1M	1M		3
+3			4	4	4	3	3	3	6	6	6	4M	4M	4M	
+4							4M	4M	4M				7	7	7
+PF	X	X	X			X	X	X	X	X		X	X	X	X
+
+4) ???
+
+5) 
+a) SSTF / C-Look
+b) (52-20) + (52-25) + (45-25) + (55-45) + (60-55) + (75-60) + (90-75) = 124 
