@@ -1,0 +1,18 @@
+1)
+
+Algoritmo: C-Look
+Movimientos: (52 - 20) + (52 - 25) + (45 - 25) + (55 - 45) + (60 - 55) + (75 - 60) + (90 - 75) = 124 movimientos
+
+2)
+
+Proceso		Llegada		CPU		I/O							TR			TE
+1			0			7		(R1, 4, 5) (R2, 6, 2)		18			11
+2			1			6		(R2, 3, 1)					11			5
+3			3			7		(R1, 2, 2) (R1, 5, 2)		19			12
+
+TPR: 16
+TPE: 9,33
+
+Algoritmo: RR TV Q=4
+
+
