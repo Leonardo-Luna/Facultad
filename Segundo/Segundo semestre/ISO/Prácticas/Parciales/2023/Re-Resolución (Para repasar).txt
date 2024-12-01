@@ -1,0 +1,32 @@
+1) 
+A)
+
+Proceso		Llegada		CPU		E/S					TR		TE
+1			0			5		(DISK 1, 3, 3)		9		4
+2			0			4		(DISK 2, 2, 2)		11		7
+3			2			3		(NETWORK, 2, 3)		10		7
+
+B) FCFS o RR TV Q=3
+C) TPR: 10 | TPE: 6
+D) Tiempo de Retorno
+E) Tiempo de Espera
+F) SJF | SRTF
+
+2) 2 KiB = 2048 bytes
+
+Página		Marco				Marco		Inicio-Fin
+0			6					0			0-2047
+1			5					1			2048-4095
+2			-					2			4096-6143
+3			1					3			6144-8191
+4			0					4			8192-10239
+								5			10240-12287
+								6			12288-14335
+
+a) 5120
+
+5120 div 2048 = 2.5
+5120 mod 2048 = 1024
+
+Page fault
+
