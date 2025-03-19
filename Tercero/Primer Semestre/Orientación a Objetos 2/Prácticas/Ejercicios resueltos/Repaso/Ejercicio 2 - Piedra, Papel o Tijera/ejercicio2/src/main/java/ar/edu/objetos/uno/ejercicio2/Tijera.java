@@ -1,17 +1,25 @@
 package ar.edu.objetos.uno.ejercicio2;
 
-public class Tijera implements Juego {
+public class Tijera extends Juego {
+	
+	public String contra(Juego j) {
+		return j.contra(this);
+	}
 	
 	public String contra(Tijera t) {
-		return "Empate";
+		return this.empate();
 	}
 	
 	public String contra(Papel p) {
-		return "Ganador: Tijera";
+		return this.gana(this);
 	}
 	
 	public String contra(Piedra p) {
-		return "Ganador: Piedra";
+		return this.gana(p);
+	}
+	
+	public String toString() {
+		return "Tijera";
 	}
 
 }
