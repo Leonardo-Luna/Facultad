@@ -22,7 +22,7 @@ public class TijeraTest {
 	@Test
 	public void testContra() {
 		
-		assertEquals("Ganador: Tijera", this.tijera.contra(this.papel));
+		assertEquals("Perdedor", this.tijera.contra(this.papel));
 		assertEquals("Ganador: Piedra", this.tijera.contra(this.piedra));
 		assertEquals("Empate", this.tijera.contra(this.tijera));
 		

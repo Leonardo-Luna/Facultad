@@ -3,18 +3,18 @@ package ar.edu.objetos.uno.ejercicio2;
 public class Piedra extends Juego {
 	
 	public String contra(Juego j) {
-		return j.contra(this);
+		return j.contraPiedra(this);
 	}
 	
-	public String contra(Piedra p) {
+	protected String contraPiedra(Piedra p) {
 		return this.empate();
 	}
 	
-	public String contra(Papel p) {
-		return this.gana(p);
+	protected String contraPapel(Papel p) {
+		return this.pierde();
 	}
 	
-	public String contra(Tijera t) {
+	protected String contraTijera(Tijera t) {
 		return this.gana(this);
 	}
 	
