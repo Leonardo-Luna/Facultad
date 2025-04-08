@@ -21,6 +21,8 @@ curl -X ?? www.redes.unlp.edu.ar/??
 
 Podría estar utilizando tanto HTTP 1.1 ya que se está enviando la cabecera Host por defecto, que pasó a ser obligatoria en esta versión.
 
+<b>Corrección del ayudante</b>: El ejercicio en sí es confuso y nadie sabe la respuesta real. Pongas lo que pongas va a estar bien porque ni te dan el comando compelto, podrías interpretar que es HTTP 1.0 o 1.1 por varios motivos.
+
 <b>b)</b> ¿Qué método está utilizando? Dicho método, ¿retorna el recurso completo solicitado?
 
 Se está utilizando el método HEAD, como se puede ver en la primera línea de la respuesta, el parámetro utilizado quedaría ```curl -X HEAD ...```.
