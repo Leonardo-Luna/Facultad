@@ -14,19 +14,20 @@ public class JSONSimpleExporter implements Exporter {
 	}
 	
 	@Override
-	public String exportar(List<Socio> socios) {
+	public String exportar(List<Socio> socios) {	
 		
-		JSONObject JSONSocio;
-		
-		for(Socio socioActual : socios) {
-			JSONSocio = new JSONObject();
-			JSONSocio.put("Nombre", socioActual.getNombre());
-			JSONSocio.put("Email", socioActual.getEmail());
-			JSONSocio.put("Legajo", socioActual.getLegajo());
-			this.exporter.add(JSONSocio);
-		}
+		socios.stream().forEach(socio -> this.crearSocio(socio));
 		
 		return this.exporter.toJSONString();
+	}
+	
+	private void crearSocio(Socio socioActual) {
+		JSONObject JSONSocio;
+		JSONSocio = new JSONObject();
+		JSONSocio.put("Nombre", socioActual.getNombre());
+		JSONSocio.put("Email", socioActual.getEmail());
+		JSONSocio.put("Legajo", socioActual.getLegajo());
+		this.exporter.add(JSONSocio);
 	}
 
 }
