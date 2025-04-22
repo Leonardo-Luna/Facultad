@@ -9,43 +9,39 @@ public class ToDoItem {
 	private State estado;
 	private Duration time;
 	private ArrayList<String> comentarios;
-	
-	//Se manda la Duratopm em tpdps los métpdps y que cada uno lo handlee como quiere?
-	
+		
 	public ToDoItem(String nombre) {
 		this.nombre = nombre;
-		this.estado = new Pending();
+		this.estado = new Pending(this);
 		this.comentarios = new ArrayList<String>();
-		
-		// Para que quede explícito:
-		this.time = null;
 	}
 	
 	public void start() {
-		this.estado = this.estado.start();
+		this.estado.start();
 	}
 	
 	public void togglePause()
 	{
-		this.estado = this.estado.togglePause();
+		this.estado.togglePause();
 	}
 	
 	public void finish()
 	{
-		this.estado =  this.estado.finish();
+		this.estado.finish();
 	}
 	
 	public Duration workedTime()
 	{
-		if(this.time == null) {
-			throw new RuntimeException("Nunca se inició este ToDoItem.");
-		}
-		return this.time;
+		return this.time; // Realmente no tengo ganas de razonar sobre este individuo
 	}
 	
 	public void addComment(String comment)
 	{
 		this.comentarios.add(comment);
+	}
+	
+	public void setState(State state) {
+		this.estado = state;
 	}
 
 }

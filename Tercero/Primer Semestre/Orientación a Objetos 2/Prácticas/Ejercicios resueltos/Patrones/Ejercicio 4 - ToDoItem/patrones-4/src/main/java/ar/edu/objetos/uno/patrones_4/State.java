@@ -2,19 +2,18 @@ package ar.edu.objetos.uno.patrones_4;
 
 public abstract class State {
 	
-	public State() {}
+	private ToDoItem item;
 	
-	public State start() {
-		return this;
+	public State(ToDoItem item) {
+		this.item = item;
 	}
 	
-	public State togglePause()
-	{
-		throw new RuntimeException("Todavía no se inició este ToDoItem.");
-	}
+	public abstract void start();
+	public abstract void togglePause();
+	public abstract void finish();
 	
-	public State finish() {
-		return new Finished();
+	protected ToDoItem getItem() {
+		return this.item;
 	}
 
 }
