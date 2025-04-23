@@ -1,6 +1,6 @@
 package ar.edu.objetos.uno.patrones_3;
 
-public interface Media {
+interface Media {
 	
 	public void play();
 

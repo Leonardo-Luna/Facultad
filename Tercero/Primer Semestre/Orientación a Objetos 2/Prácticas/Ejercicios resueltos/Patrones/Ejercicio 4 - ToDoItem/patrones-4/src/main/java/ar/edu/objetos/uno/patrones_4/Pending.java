@@ -9,7 +9,7 @@ public class Pending extends State{
 	@Override
 	public void start() {
 		ToDoItem item = this.getItem();
-		item.setState(new InProgress(item);
+		item.setState(new InProgress(item));
 	}
 	
 	@Override
