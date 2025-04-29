@@ -1,15 +1,16 @@
 package ar.edu.objetos.uno.patrones_5;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Pelicula {
 	
 	private String titulo;
-	private int estreno;
+	private LocalDate estreno;
 	private ArrayList<Pelicula> similares;
 	private double puntaje;
 	
-	public Pelicula(String titulo, int estreno, double puntaje) {
+	public Pelicula(String titulo, LocalDate estreno, double puntaje) {
 		this.titulo = titulo;
 		this.estreno = estreno;
 		this.puntaje = puntaje;
@@ -34,7 +35,7 @@ public class Pelicula {
 		return this.puntaje;
 	}
 	
-	public int getEstreno() {
+	public LocalDate getEstreno() {
 		return this.estreno;
 	}
 	
