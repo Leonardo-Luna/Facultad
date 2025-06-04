@@ -12,6 +12,5 @@ public abstract class PCBuilder {
 		return this.pc;
 	}
 	
-	// Tengo terrible duda con el tema componentes, porque algunos son una colección (la mayoría de la PC gamer. Cómo gestiono eso?
-
+	
 }
