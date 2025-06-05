@@ -14,8 +14,6 @@ public class DatabaseProxy implements DatabaseAccess {
 		this.password = password;
 	}
 	
-	// Sí, en lugar de retornar null o huevadas podrías lanzar exceptions y chau. no. tengo. ganas. de. pensar. e' sábado.
-	
 	public void login(String password) {
 		if(this.password.equals(password)) {
 			this.autenticado = true;	
@@ -31,7 +29,7 @@ public class DatabaseProxy implements DatabaseAccess {
     		return this.db.getSearchResults(queryString);
     	}
     	
-    	return null;
+    	throw new Error("Accedo denegado");
     }
 
     public int insertNewRow(List<String> rowData) {
@@ -39,7 +37,7 @@ public class DatabaseProxy implements DatabaseAccess {
     		return this.db.insertNewRow(rowData);
     	}
     	
-    	return 0;
+    	throw new Error("Accedo denegado");
     }
 
 }
