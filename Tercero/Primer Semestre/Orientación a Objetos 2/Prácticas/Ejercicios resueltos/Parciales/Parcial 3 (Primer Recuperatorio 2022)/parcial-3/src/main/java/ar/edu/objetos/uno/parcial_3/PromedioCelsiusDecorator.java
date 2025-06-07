@@ -7,7 +7,7 @@ public class PromedioCelsiusDecorator extends BaseDecorator {
 	}
 	
 	public String displayData() {
-		return "Promedio de temperaturas C: " + this.getPromedioCelsius() + " ";
+		return this.wrappee.displayData() +"Promedio de temperaturas C: " + this.getPromedioCelsius() + " ";
 	}
 	
 }

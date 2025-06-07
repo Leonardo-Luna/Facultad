@@ -7,7 +7,7 @@ public class PromedioFahrenheitDecorator extends BaseDecorator {
 	}
 	
 	public String displayData() {
-		return "Promedio de temperaturas F: " + this.getPromedioFahrenheit() + " ";
+		return this.wrappee.displayData() + "Promedio de temperaturas F: " + this.getPromedioFahrenheit() + " ";
 	}
 
 }

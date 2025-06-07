@@ -23,16 +23,16 @@ public class AppComponentTest {
 	@Test
 	public void comprobarTest2() {
 		BaseDecorator presionDecorator = new PresionAtmosfericaDecorator(this.appComponent);
-		BaseDecorator radiacionDecorator = new RadiacionSolarDecorator(this.appComponent);
-		assertEquals("Presión atmosférica: 1008.0 Radiación solar: 500.0 ", presionDecorator.displayData()+radiacionDecorator.displayData());
+		BaseDecorator radiacionDecorator = new RadiacionSolarDecorator(presionDecorator);
+		assertEquals("Presión atmosférica: 1008.0 Radiación solar: 500.0 ", radiacionDecorator.displayData());
 	}
 	
 	@Test
 	public void comprobarTest3() {
 		BaseDecorator presionDecorator = new PresionAtmosfericaDecorator(this.appComponent);
-		BaseDecorator celsiusDecorator = new TemperaturaCelsiusDecorator(this.appComponent);
-		BaseDecorator promedioCelsius = new PromedioCelsiusDecorator(this.appComponent);
-		assertEquals("Presión atmosférica: 1008.0 Temperatura C: 28.0 Promedio de temperaturas C: 25.0 ", presionDecorator.displayData()+celsiusDecorator.displayData()+promedioCelsius.displayData());
+		BaseDecorator celsiusDecorator = new TemperaturaCelsiusDecorator(presionDecorator);
+		BaseDecorator promedioCelsius = new PromedioCelsiusDecorator(celsiusDecorator);
+		assertEquals("Presión atmosférica: 1008.0 Temperatura C: 28.0 Promedio de temperaturas C: 25.0 ", promedioCelsius.displayData());
 		// Este test da mal por los decimales :L
 	}
 

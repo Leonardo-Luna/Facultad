@@ -7,7 +7,7 @@ public class RadiacionSolarDecorator extends BaseDecorator {
 	}
 	
 	public String displayData() {
-		return "Radiación solar: " + this.getRadiacionSolar() + " ";
+		return this.wrappee.displayData() + "Radiación solar: " + this.getRadiacionSolar() + " ";
 	}
 
 }

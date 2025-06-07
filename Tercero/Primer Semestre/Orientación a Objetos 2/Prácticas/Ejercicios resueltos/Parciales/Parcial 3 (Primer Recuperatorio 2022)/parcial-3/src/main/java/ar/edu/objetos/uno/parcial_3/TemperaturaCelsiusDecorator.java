@@ -7,7 +7,7 @@ public class TemperaturaCelsiusDecorator extends BaseDecorator {
 	}
 	
 	public String displayData() {
-		return "Temperatura C: " + this.getTemperaturaCelsius() + " ";
+		return this.wrappee.displayData() + "Temperatura C: " + this.getTemperaturaCelsius() + " ";
 	}
 
 }

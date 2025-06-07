@@ -7,7 +7,7 @@ public class PresionAtmosfericaDecorator extends BaseDecorator {
 	}
 	
 	public String displayData() {
-		return "Presión atmosférica: " + this.getPresion() + " ";
+		return this.wrappee.displayData() + "Presión atmosférica: " + this.getPresion() + " ";
 	}
 	
 }

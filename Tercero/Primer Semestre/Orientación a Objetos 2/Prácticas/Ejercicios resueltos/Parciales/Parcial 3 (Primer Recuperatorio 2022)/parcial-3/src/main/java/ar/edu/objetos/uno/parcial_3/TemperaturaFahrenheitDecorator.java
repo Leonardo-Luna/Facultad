@@ -7,7 +7,7 @@ public class TemperaturaFahrenheitDecorator extends BaseDecorator {
 	}
 	
 	public String displayData() {
-		return "Temperatura F: " + this.getTemperaturaFahrenheit() + " ";
+		return this.wrappee.displayData() + "Temperatura F: " + this.getTemperaturaFahrenheit() + " ";
 	}
 	
 }
