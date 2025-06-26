@@ -7,10 +7,11 @@ import org.junit.jupiter.api.*;
 public class AppComponentTest {
 	
 	private Component appComponent;
+	private HomeWeatherStation hws;
 	
 	@BeforeEach
 	public void setUp() {
-		HomeWeatherStation hws = new HomeWeatherStation(); // Se asume que los sensores arrojarán los valores del ejemplo
+		this.hws = new HomeWeatherStation(); // Se asume que los sensores arrojarán los valores del ejemplo
 		this.appComponent = new AppComponent(hws);
 	}
 	
@@ -22,9 +23,10 @@ public class AppComponentTest {
 	
 	@Test
 	public void comprobarTest2() {
-		BaseDecorator presionDecorator = new PresionAtmosfericaDecorator(this.appComponent);
-		BaseDecorator radiacionDecorator = new RadiacionSolarDecorator(presionDecorator);
-		assertEquals("Presión atmosférica: 1008.0 Radiación solar: 500.0 ", radiacionDecorator.displayData());
+		Component componente = new AppComponent(this.hws);
+		componente = new PresionAtmosfericaDecorator(componente);
+		componente = new RadiacionSolarDecorator(componente);
+		assertEquals("Presión atmosférica: 1008.0 Radiación solar: 500.0 ", componente.displayData());
 	}
 	
 	@Test
