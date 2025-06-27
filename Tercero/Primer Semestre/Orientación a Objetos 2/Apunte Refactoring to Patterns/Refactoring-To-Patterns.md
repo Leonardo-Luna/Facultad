@@ -2,7 +2,7 @@
 >En la muestra de parciales dijeron que además de explicar cada paso, se debe especificar sobre qué método o parte se está trabajando.
 
 >[!warning]
->Las versiones resumidas son ayudas memotécnicas, aparentemente la cátedra pide el paso a paso punteado.
+>Las versiones resumidas son ayudas memotécnicas, aparentemente la cátedra pide el paso a paso punteado y aclarando el contexto donde se aplica.
 
 <hr>
 
@@ -23,17 +23,24 @@ Buscar los métodos similares, pull up en esos, y rename para unificarlos, renam
 
 **La teoría en ningún momento menciona la idea de crear una superclase con estos métodos similares, saltaría por la ventana, pero vivo en planta baja**
 
+**Respuesta del ayudante**: Es posible que esté incompleta la mecánica ya que puede ser que se partía de un ejemplo donde no era necesario crear más clases. De todas formas es medio raro como está redactado. 
+Te recomiendo escribir los pasos como lo harías en el momento y no seguir una secuencia para ningún Refactor to Patterns.
+
 <hr>
 
 - Extract Adapter
 
 **No está en la teoría, solo se menciona en el título pero no se dio**
 
+**Respuesta del ayudante**: Nunca vi ese refactor.
+
 <hr>
 
 - Replace Implicit Tree with Composite
 
 **No está en la teoría, solo se menciona en el título pero no se dio**
+
+**Respuesta del ayudante**: Tampoco vi este refactor.
 
 <hr>
 
@@ -92,6 +99,8 @@ Si no alcanza con eso (nunca alcanza, eso no es Decorator):
 Aplicar "Replace Inheritance with Delegation" para que ¿...? y aplicar "Extract Parameter" en decorator para asignar decorado (wrappee?).
 
 **Este no lo termino de entender, la realidad es que no queda algo siquiera similar al patrón Decorator**
+
+**Respuesta del ayudante**: La verdad que ese Refactor no tiene sentido cómo está redactado, el resultado que te dan o la parte de "Si no alcanza con estos pasos...", es mejor no quemarse la cabeza y en el peor caso leerlo del libro.
 
 <hr>
 
