@@ -1,0 +1,12 @@
+1) D, F
+2) B, C, F
+3) B, D
+4) Verdadero
+5) Falso
+6) D (En esta capa no hay nada para hacer, es DEMASIADO bajo nivel)
+7) A, B, E
+8) A, C, D, F
+9) A, C, E
+10) D (No hay prioridades, por eso se usa un tiempo aleatorio)
+
+Enunciado de https://github.com/CapitanaBanana/Facultad/tree/main/Sexto_Cuatrimestre/Redes/Parciales_teóricos_2024
