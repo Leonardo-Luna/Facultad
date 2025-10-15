@@ -1,0 +1,263 @@
+[
+    {
+        "id": "13e31ac9341af0fb",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6c1148434663693e",
+        "type": "mqtt out",
+        "z": "13e31ac9341af0fb",
+        "name": "",
+        "topic": "A17 Interruptor",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1b202fc36f16713d",
+        "x": 1020,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1d8ee1e82340055f",
+        "type": "ui_button",
+        "z": "13e31ac9341af0fb",
+        "name": "ENCENDIDO/ON",
+        "group": "dc0c5f3c47102d17",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "ON-A17",
+        "topicType": "msg",
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "596a7c23aaf31623",
+                "6c1148434663693e"
+            ]
+        ]
+    },
+    {
+        "id": "1af17c618b657bb4",
+        "type": "ui_switch",
+        "z": "13e31ac9341af0fb",
+        "name": "",
+        "label": "Timer 5s",
+        "tooltip": "",
+        "group": "dc0c5f3c47102d17",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 280,
+        "y": 360,
+        "wires": [
+            [
+                "dc7f74f5c5aa962f"
+            ]
+        ]
+    },
+    {
+        "id": "501c785e7012e761",
+        "type": "ui_button",
+        "z": "13e31ac9341af0fb",
+        "name": "APAGADO/OFF",
+        "group": "dc0c5f3c47102d17",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "6c1148434663693e"
+            ]
+        ]
+    },
+    {
+        "id": "aded7261f51a45ca",
+        "type": "delay",
+        "z": "13e31ac9341af0fb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 120,
+        "wires": [
+            [
+                "6c1148434663693e"
+            ]
+        ]
+    },
+    {
+        "id": "dc7f74f5c5aa962f",
+        "type": "change",
+        "z": "13e31ac9341af0fb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timerActivo",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "596a7c23aaf31623",
+        "type": "function",
+        "z": "13e31ac9341af0fb",
+        "name": "function 2",
+        "func": "var timerActivo = global.get('timerActivo');\n\n// Si el timer está activo (el ui-switch está en ON)\nif (timerActivo == true) {\n    var newMsg = { payload: 0}\n    return newMsg\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 120,
+        "wires": [
+            [
+                "aded7261f51a45ca"
+            ]
+        ]
+    },
+    {
+        "id": "1c95db3c27be1f4d",
+        "type": "ui_spacer",
+        "z": "13e31ac9341af0fb",
+        "name": "spacer",
+        "group": "dc0c5f3c47102d17",
+        "order": 2,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "1b202fc36f16713d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "a19dtnoi0vf30n-ats.iot.us-west-2.amazonaws.com",
+        "port": "8883",
+        "tls": "2532adf56c13c073",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "dc0c5f3c47102d17",
+        "type": "ui_group",
+        "name": "CONTROL REMOTO",
+        "tab": "6981612a416e2de0",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2532adf56c13c073",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "A17-ObjectB.cert.pem",
+        "keyname": "A17-ObjectB.private.key",
+        "caname": "AmazonRootCA1.pem",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "6981612a416e2de0",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1
+    }
+]
