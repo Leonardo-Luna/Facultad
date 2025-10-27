@@ -1,0 +1,194 @@
+[
+    {
+        "id": "460c517df1af06f1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fdac26f152ca9abb",
+        "type": "rpi-gpio out",
+        "z": "460c517df1af06f1",
+        "name": "VERDE",
+        "pin": "26",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1120,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "9d525d1f38a8264f",
+        "type": "rpi-gpio out",
+        "z": "460c517df1af06f1",
+        "name": "AZUL",
+        "pin": "13",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1090,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bb0fe0fcfec5297a",
+        "type": "rpi-gpio out",
+        "z": "460c517df1af06f1",
+        "name": "ROJO",
+        "pin": "19",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1170,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4d2d6a6229711051",
+        "type": "rpi-gpio in",
+        "z": "460c517df1af06f1",
+        "name": "",
+        "pin": "4",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 310,
+        "y": 360,
+        "wires": [
+            [
+                "9d525d1f38a8264f",
+                "f49570e72672c269"
+            ]
+        ]
+    },
+    {
+        "id": "8511aac493d60099",
+        "type": "rpi-gpio in",
+        "z": "460c517df1af06f1",
+        "name": "",
+        "pin": "27",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 270,
+        "y": 720,
+        "wires": [
+            [
+                "5d52408ad93215aa",
+                "fdac26f152ca9abb",
+                "f49570e72672c269"
+            ]
+        ]
+    },
+    {
+        "id": "5d52408ad93215aa",
+        "type": "change",
+        "z": "460c517df1af06f1",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 620,
+        "wires": [
+            [
+                "bb0fe0fcfec5297a"
+            ]
+        ]
+    },
+    {
+        "id": "f49570e72672c269",
+        "type": "delay",
+        "z": "460c517df1af06f1",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 520,
+        "wires": [
+            [
+                "673d709ff331f075"
+            ]
+        ]
+    },
+    {
+        "id": "673d709ff331f075",
+        "type": "change",
+        "z": "460c517df1af06f1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 520,
+        "wires": [
+            [
+                "9d525d1f38a8264f",
+                "bb0fe0fcfec5297a",
+                "fdac26f152ca9abb"
+            ]
+        ]
+    },
+    {
+        "id": "62b37f593b3da912",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-node-pi-gpio": "2.0.6"
+        }
+    }
+]
