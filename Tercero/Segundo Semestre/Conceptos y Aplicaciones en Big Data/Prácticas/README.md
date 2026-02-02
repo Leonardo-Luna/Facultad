@@ -1,7 +1,7 @@
 ## Integrantes el grupo
 
-Luna, Leonardo | 21297/2
-Marcos, Santiago | 23345/0
+- Luna, Leonardo | 21297/2
+- Marcos, Santiago | 23345/0
 
 ## Información Extra
 
